@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UnitConverter
+namespace NetMetrology
 {
     public class Class1
     {
