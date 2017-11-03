@@ -8,6 +8,6 @@
     {
         bool CanConvert();
 
-        Length ConvertLength(float value, LengthType type);
+        Length ConvertLength(float value, LengthType fromType, LengthType toType);
     }
 }
