@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Length\" />
+    <Compile Remove="Length\**" />
+    <EmbeddedResource Remove="Length\**" />
+    <None Remove="Length\**" />
   </ItemGroup>
 
 </Project>
