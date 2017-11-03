@@ -22,7 +22,7 @@
         {
             var value = 1f;
             var hasRate = _instance.LengthRateDic.TryGetValue((fromType, toType), out value);
-            if (!hasRate) throw new Exception("not supported to convert");
+            if (!hasRate) throw new Exception("convert not supported");
             return value;
         }
     }
