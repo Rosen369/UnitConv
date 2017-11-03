@@ -33,5 +33,16 @@
         {
             return this.ConvertValue(LengthType.Meter);
         }
+
+        public override string ToString()
+        {
+            return this.ToString(Languages.English);
+        }
+
+        public string ToString(Languages language)
+        {
+            var value = Math.Round(RawValue, 3).ToString();
+            return value + UnitDisplayer.GetDisplay(language, RawType);
+        }
     }
 }
