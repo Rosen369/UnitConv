@@ -8,20 +8,20 @@
     {
         public Length(float value, LengthType type)
         {
-            this.RawValue = value;
-            this.RawType = type;
+            this.Value = value;
+            this.LengthType = type;
         }
 
-        private float RawValue { get; set; }
+        public float Value { get; private set; }
 
-        private LengthType RawType { get; set; }
+        public LengthType LengthType { get; private set; }
 
         internal Length ConvertValue(LengthType toType)
         {
-            if (toType == this.RawType) return this;
-            var basicRate = ConvertRateContainer.GetRate(this.RawType);
+            if (toType == this.LengthType) return this;
+            var basicRate = ConvertRateContainer.GetRate(this.LengthType);
             var rate = ConvertRateContainer.GetRate(toType);
-            var targetValue = RawValue / basicRate * rate;
+            var targetValue = Value * basicRate / rate;
             return new Length(targetValue, toType);
         }
 
@@ -37,8 +37,8 @@
 
         public override string ToString(Languages language, int digits)
         {
-            var value = Math.Round(this.RawValue, digits).ToString();
-            return value + UnitDisplayer.GetDisplay(language, this.RawType);
+            var value = Math.Round(this.Value, digits).ToString();
+            return value + UnitDisplayer.GetDisplay(language, this.LengthType);
         }
     }
 }
