@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Text;
 
-    public class Length
+    public class Length : Measurement
     {
         public Length(float value, LengthType type)
         {
@@ -18,7 +18,7 @@
 
         internal Length ConvertValue(LengthType toType)
         {
-            if (toType == RawType) return this;
+            if (toType == this.RawType) return this;
             var rate = ConvertRateContainer.GetRate(this.RawType, toType);
             var targetValue = RawValue * rate;
             return new Length(targetValue, toType);
@@ -34,15 +34,10 @@
             return this.ConvertValue(LengthType.Meter);
         }
 
-        public override string ToString()
+        public override string ToString(Languages language, int digits)
         {
-            return this.ToString(Languages.English);
-        }
-
-        public string ToString(Languages language)
-        {
-            var value = Math.Round(RawValue, 3).ToString();
-            return value + UnitDisplayer.GetDisplay(language, RawType);
+            var value = Math.Round(this.RawValue, digits).ToString();
+            return value + UnitDisplayer.GetDisplay(language, this.RawType);
         }
     }
 }
