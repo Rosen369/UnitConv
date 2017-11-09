@@ -15,7 +15,8 @@
         {
             LanguageContainer = new Dictionary<Languages, LanguageDisplayer>
             {
-                { Languages.English, new EnDisplayer() }
+                { Languages.English, new EnDisplayer() },
+                { Languages.ChineseSimplify, new ChsDisplayer() }
             };
         }
 
