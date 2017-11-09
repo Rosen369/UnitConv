@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Text;
 
-    interface ILanguageDisplayer
+    internal interface ILanguageDisplayer
     {
         string GetLength(LengthType type);
     }

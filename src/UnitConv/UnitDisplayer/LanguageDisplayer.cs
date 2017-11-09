@@ -4,8 +4,15 @@
     using System.Collections.Generic;
     using System.Text;
 
-    public abstract class LanguageDisplayer : ILanguageDisplayer
+    internal abstract class LanguageDisplayer : ILanguageDisplayer
     {
+        public LanguageDisplayer()
+        {
+            this.InitLengthDisplay();
+        }
+
+        protected abstract void InitLengthDisplay();
+
         protected IDictionary<LengthType, string> LengthDic { get; set; }
 
         public virtual string GetLength(LengthType type)

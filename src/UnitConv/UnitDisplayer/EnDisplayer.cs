@@ -4,19 +4,30 @@
     using System.Collections.Generic;
     using System.Text;
 
-    public class EnDisplayer : LanguageDisplayer
+    internal class EnDisplayer : LanguageDisplayer
     {
-        public EnDisplayer()
+        protected override void InitLengthDisplay()
         {
-            this.InitLengthDisplay();
-        }
-
-        private void InitLengthDisplay()
-        {
-            LengthDic = new Dictionary<LengthType, string>();
-            LengthDic.Add(LengthType.Kilometer, "km");
-            LengthDic.Add(LengthType.Meter, "m");
-            LengthDic.Add(LengthType.Mile, "mi");
+            LengthDic = new Dictionary<LengthType, string>
+            {
+                { LengthType.Kilometer, "km" },
+                { LengthType.Meter, "m" },
+                { LengthType.Decimeter, "dm" },
+                { LengthType.Centimeter, "cm" },
+                { LengthType.Millimeter, "mm" },
+                { LengthType.Micrometer, "um" },
+                { LengthType.Nanometer, "nm" },
+                { LengthType.Picometer, "pm" },
+                { LengthType.LightYear, "ly" },
+                { LengthType.AstronomicalUnit, "AU" },
+                { LengthType.Mile, "mi" },
+                { LengthType.Inch, "in" },
+                { LengthType.Foot, "ft" },
+                { LengthType.Yard, "yd" },
+                { LengthType.Fathom, "fm" },
+                { LengthType.Furlong, "fur" },
+                { LengthType.NauticalMile, "nmi" },
+            };
         }
     }
 }

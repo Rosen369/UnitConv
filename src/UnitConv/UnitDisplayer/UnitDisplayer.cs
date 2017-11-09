@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Text;
 
-    public class UnitDisplayer
+    internal class UnitDisplayer
     {
         static UnitDisplayer()
         {
@@ -13,8 +13,10 @@
 
         private UnitDisplayer()
         {
-            LanguageContainer = new Dictionary<Languages, LanguageDisplayer>();
-            LanguageContainer.Add(Languages.English, new EnDisplayer());
+            LanguageContainer = new Dictionary<Languages, LanguageDisplayer>
+            {
+                { Languages.English, new EnDisplayer() }
+            };
         }
 
         private static UnitDisplayer Instance { get; set; }
@@ -23,7 +25,7 @@
 
         public static string GetDisplay(Languages language, LengthType type)
         {
-            var container = Instance.LanguageContainer[Languages.English];
+            var container = Instance.LanguageContainer[language];
             var display = container.GetLength(type);
             return display;
         }
