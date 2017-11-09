@@ -8,10 +8,17 @@ namespace UnitConvTest
     public class TestLength
     {
         [TestMethod]
-        public void TestKiloMeter()
+        public void TestKiloMeterValue()
         {
             var kilo = new Length(100, LengthType.Kilometer);
             Assert.AreEqual(kilo.ToMeter().Value, 100000);
+        }
+
+        [TestMethod]
+        public void TestKiloMeterString()
+        {
+            var kilo = new Length(100.1415f, LengthType.Kilometer);
+            Assert.AreEqual(kilo.ToString(), "100.142km");
         }
     }
 }
