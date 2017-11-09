@@ -18,10 +18,10 @@
             this.InitLengthRate();
         }
 
-        public static float GetRate(LengthType fromType, LengthType toType)
+        public static float GetRate(LengthType toType)
         {
             var value = 1f;
-            var hasRate = _instance.LengthRateDic.TryGetValue((fromType, toType), out value);
+            var hasRate = _instance.LengthRateDic.TryGetValue(toType, out value);
             if (!hasRate) throw new Exception("convert not supported");
             return value;
         }

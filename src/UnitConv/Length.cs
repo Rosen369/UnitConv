@@ -19,8 +19,9 @@
         internal Length ConvertValue(LengthType toType)
         {
             if (toType == this.RawType) return this;
-            var rate = ConvertRateContainer.GetRate(this.RawType, toType);
-            var targetValue = RawValue * rate;
+            var basicRate = ConvertRateContainer.GetRate(this.RawType);
+            var rate = ConvertRateContainer.GetRate(toType);
+            var targetValue = RawValue / basicRate * rate;
             return new Length(targetValue, toType);
         }
 

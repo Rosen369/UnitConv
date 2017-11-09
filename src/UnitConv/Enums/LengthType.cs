@@ -6,7 +6,22 @@
 
     public enum LengthType
     {
+        Kilometer,
         Meter,
-        Mile
+        Decimeter,
+        Centimeter,
+        Millimeter,
+        Micrometer,
+        Nanometer,
+        Picometer,
+        LightYear,
+        AstronomicalUnit,
+        Mile,
+        Yard,
+        Fathom,
+        Furlong,
+        Foot,
+        Inch,
+        NauticalMile
     }
 }
