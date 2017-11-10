@@ -24,10 +24,10 @@
 
         private IDictionary<Languages, LanguageDisplayer> LanguageContainer { get; set; }
 
-        public static string GetDisplay(Languages language, LengthType type)
+        public static string GetDisplay(Languages language, LengthUnit unit)
         {
             var container = Instance.LanguageContainer[language];
-            var display = container.GetLength(type);
+            var display = container.GetLength(unit);
             return display;
         }
     }

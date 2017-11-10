@@ -6,6 +6,6 @@
 
     public interface IUnitConverter
     {
-        Length ConvertLength(float value, LengthType fromType, LengthType toType);
+        Length ConvertLength(float value, LengthUnit fromUnit, LengthUnit toUnit);
     }
 }

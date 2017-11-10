@@ -8,25 +8,25 @@
     {
         protected override void InitLengthDisplay()
         {
-            LengthDic = new Dictionary<LengthType, string>
+            LengthDic = new Dictionary<LengthUnit, string>
             {
-                { LengthType.Kilometer, "千米" },
-                { LengthType.Meter, "米" },
-                { LengthType.Decimeter, "分米" },
-                { LengthType.Centimeter, "厘米" },
-                { LengthType.Millimeter, "毫米" },
-                { LengthType.Micrometer, "微米" },
-                { LengthType.Nanometer, "纳米" },
-                { LengthType.Picometer, "皮米" },
-                { LengthType.LightYear, "光年" },
-                { LengthType.AstronomicalUnit, "天文单位" },
-                { LengthType.Mile, "英里" },
-                { LengthType.Inch, "英寸" },
-                { LengthType.Foot, "英尺" },
-                { LengthType.Yard, "码" },
-                { LengthType.Fathom, "英寻" },
-                { LengthType.Furlong, "弗隆" },
-                { LengthType.NauticalMile, "海里" },
+                { LengthUnit.Kilometer, "千米" },
+                { LengthUnit.Meter, "米" },
+                { LengthUnit.Decimeter, "分米" },
+                { LengthUnit.Centimeter, "厘米" },
+                { LengthUnit.Millimeter, "毫米" },
+                { LengthUnit.Micrometer, "微米" },
+                { LengthUnit.Nanometer, "纳米" },
+                { LengthUnit.Picometer, "皮米" },
+                { LengthUnit.LightYear, "光年" },
+                { LengthUnit.AstronomicalUnit, "天文单位" },
+                { LengthUnit.Mile, "英里" },
+                { LengthUnit.Inch, "英寸" },
+                { LengthUnit.Foot, "英尺" },
+                { LengthUnit.Yard, "码" },
+                { LengthUnit.Fathom, "英寻" },
+                { LengthUnit.Furlong, "弗隆" },
+                { LengthUnit.NauticalMile, "海里" },
             };
         }
     }

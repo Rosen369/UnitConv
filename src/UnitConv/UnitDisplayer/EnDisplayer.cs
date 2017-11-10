@@ -8,25 +8,25 @@
     {
         protected override void InitLengthDisplay()
         {
-            LengthDic = new Dictionary<LengthType, string>
+            LengthDic = new Dictionary<LengthUnit, string>
             {
-                { LengthType.Kilometer, "km" },
-                { LengthType.Meter, "m" },
-                { LengthType.Decimeter, "dm" },
-                { LengthType.Centimeter, "cm" },
-                { LengthType.Millimeter, "mm" },
-                { LengthType.Micrometer, "um" },
-                { LengthType.Nanometer, "nm" },
-                { LengthType.Picometer, "pm" },
-                { LengthType.LightYear, "ly" },
-                { LengthType.AstronomicalUnit, "AU" },
-                { LengthType.Mile, "mi" },
-                { LengthType.Inch, "in" },
-                { LengthType.Foot, "ft" },
-                { LengthType.Yard, "yd" },
-                { LengthType.Fathom, "fm" },
-                { LengthType.Furlong, "fur" },
-                { LengthType.NauticalMile, "nmi" },
+                { LengthUnit.Kilometer, "km" },
+                { LengthUnit.Meter, "m" },
+                { LengthUnit.Decimeter, "dm" },
+                { LengthUnit.Centimeter, "cm" },
+                { LengthUnit.Millimeter, "mm" },
+                { LengthUnit.Micrometer, "um" },
+                { LengthUnit.Nanometer, "nm" },
+                { LengthUnit.Picometer, "pm" },
+                { LengthUnit.LightYear, "ly" },
+                { LengthUnit.AstronomicalUnit, "AU" },
+                { LengthUnit.Mile, "mi" },
+                { LengthUnit.Inch, "in" },
+                { LengthUnit.Foot, "ft" },
+                { LengthUnit.Yard, "yd" },
+                { LengthUnit.Fathom, "fm" },
+                { LengthUnit.Furlong, "fur" },
+                { LengthUnit.NauticalMile, "nmi" },
             };
         }
     }

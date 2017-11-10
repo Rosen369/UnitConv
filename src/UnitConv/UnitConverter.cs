@@ -6,9 +6,9 @@
 
     public class UnitConverter : IUnitConverter
     {
-        public Length ConvertLength(float value, LengthType fromType, LengthType toType)
+        public Length ConvertLength(float value, LengthUnit fromUnit, LengthUnit toUnit)
         {
-            return new Length(value, fromType).ConvertValue(toType);
+            return new Length(value, fromUnit).ConvertValue(toUnit);
         }
     }
 }

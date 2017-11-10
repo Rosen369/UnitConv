@@ -13,15 +13,15 @@
 
         protected abstract void InitLengthDisplay();
 
-        protected IDictionary<LengthType, string> LengthDic { get; set; }
+        protected IDictionary<LengthUnit, string> LengthDic { get; set; }
 
-        public virtual string GetLength(LengthType type)
+        public virtual string GetLength(LengthUnit unit)
         {
             var display = string.Empty;
-            var hasDisplay = LengthDic.TryGetValue(type, out display);
+            var hasDisplay = LengthDic.TryGetValue(unit, out display);
             if (!hasDisplay)
             {
-                throw new Exception("dont have display of " + type);
+                throw new Exception("dont have display of " + unit);
             }
             return display;
         }

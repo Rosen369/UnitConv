@@ -6,6 +6,6 @@
 
     internal interface ILanguageDisplayer
     {
-        string GetLength(LengthType type);
+        string GetLength(LengthUnit type);
     }
 }

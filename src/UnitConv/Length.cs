@@ -6,114 +6,114 @@
 
     public class Length : Measurement
     {
-        public Length(float value, LengthType type)
+        public Length(float value, LengthUnit unit)
         {
             this.Value = value;
-            this.LengthType = type;
+            this.Unit = unit;
         }
 
         public float Value { get; private set; }
 
-        public LengthType LengthType { get; private set; }
+        public LengthUnit Unit { get; private set; }
 
-        internal Length ConvertValue(LengthType toType)
+        internal Length ConvertValue(LengthUnit toUnit)
         {
-            if (toType == this.LengthType) return this;
-            var basicRate = ConvertRateContainer.GetRate(this.LengthType);
-            var rate = ConvertRateContainer.GetRate(toType);
+            if (toUnit == this.Unit) return this;
+            var basicRate = ConvertRateContainer.GetRate(this.Unit);
+            var rate = ConvertRateContainer.GetRate(toUnit);
             var targetValue = Value * basicRate / rate;
-            return new Length(targetValue, toType);
+            return new Length(targetValue, toUnit);
         }
 
         public Length ToMile()
         {
-            return this.ConvertValue(LengthType.Mile);
+            return this.ConvertValue(LengthUnit.Mile);
         }
 
         public Length ToMeter()
         {
-            return this.ConvertValue(LengthType.Meter);
+            return this.ConvertValue(LengthUnit.Meter);
         }
 
         public Length ToKilometer()
         {
-            return this.ConvertValue(LengthType.Kilometer);
+            return this.ConvertValue(LengthUnit.Kilometer);
         }
 
         public Length ToCentimeter()
         {
-            return this.ConvertValue(LengthType.Centimeter);
+            return this.ConvertValue(LengthUnit.Centimeter);
         }
 
         public Length ToDecimeter()
         {
-            return this.ConvertValue(LengthType.Decimeter);
+            return this.ConvertValue(LengthUnit.Decimeter);
         }
 
         public Length ToMillimeter()
         {
-            return this.ConvertValue(LengthType.Millimeter);
+            return this.ConvertValue(LengthUnit.Millimeter);
         }
 
         public Length ToMicrometer()
         {
-            return this.ConvertValue(LengthType.Micrometer);
+            return this.ConvertValue(LengthUnit.Micrometer);
         }
 
         public Length ToNanometer()
         {
-            return this.ConvertValue(LengthType.Nanometer);
+            return this.ConvertValue(LengthUnit.Nanometer);
         }
 
         public Length ToPicometer()
         {
-            return this.ConvertValue(LengthType.Picometer);
+            return this.ConvertValue(LengthUnit.Picometer);
         }
 
         public Length ToLightYear()
         {
-            return this.ConvertValue(LengthType.LightYear);
+            return this.ConvertValue(LengthUnit.LightYear);
         }
 
         public Length ToAstronomicalUnit()
         {
-            return this.ConvertValue(LengthType.AstronomicalUnit);
+            return this.ConvertValue(LengthUnit.AstronomicalUnit);
         }
 
         public Length ToInch()
         {
-            return this.ConvertValue(LengthType.Inch);
+            return this.ConvertValue(LengthUnit.Inch);
         }
 
         public Length ToFoot()
         {
-            return this.ConvertValue(LengthType.Foot);
+            return this.ConvertValue(LengthUnit.Foot);
         }
 
         public Length ToYard()
         {
-            return this.ConvertValue(LengthType.Yard);
+            return this.ConvertValue(LengthUnit.Yard);
         }
 
         public Length ToFathom()
         {
-            return this.ConvertValue(LengthType.Fathom);
+            return this.ConvertValue(LengthUnit.Fathom);
         }
 
         public Length ToFurlong()
         {
-            return this.ConvertValue(LengthType.Furlong);
+            return this.ConvertValue(LengthUnit.Furlong);
         }
 
         public Length ToNauticalMile()
         {
-            return this.ConvertValue(LengthType.NauticalMile);
+            return this.ConvertValue(LengthUnit.NauticalMile);
         }
 
         public override string ToString(Languages language, int digits)
         {
             var value = Math.Round(this.Value, digits).ToString();
-            return value + UnitDisplayer.GetDisplay(language, this.LengthType);
+            return value + UnitDisplayer.GetDisplay(language, this.Unit);
         }
 
         public override bool Equals(object obj)
@@ -124,8 +124,16 @@
 
         public bool Equals(Length length)
         {
-            var value = length.ConvertValue(this.LengthType).Value;
+            var value = length.ConvertValue(this.Unit).Value;
             return value == this.Value;
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = 1582882615;
+            hashCode = hashCode * -1521134295 + Value.GetHashCode();
+            hashCode = hashCode * -1521134295 + Unit.GetHashCode();
+            return hashCode;
         }
     }
 }
