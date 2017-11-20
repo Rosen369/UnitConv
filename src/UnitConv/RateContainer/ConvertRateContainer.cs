@@ -19,17 +19,17 @@ namespace UnitConv
             this.InitAreaRate();
         }
 
-        public static float GetRate(LengthUnit toUnit)
+        public static decimal GetRate(LengthUnit toUnit)
         {
-            var value = 1f;
+            var value = 1m;
             var hasRate = _instance.LengthRateDic.TryGetValue(toUnit, out value);
             if (!hasRate) throw new Exception("convert not supported");
             return value;
         }
 
-        public static float GetRate(AreaUnit toUnit)
+        public static decimal GetRate(AreaUnit toUnit)
         {
-            var value = 1f;
+            var value = 1m;
             var hasRate = _instance.AreaRateDic.TryGetValue(toUnit, out value);
             if (!hasRate) throw new Exception("convert not supported");
             return value;

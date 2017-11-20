@@ -6,24 +6,24 @@ namespace UnitConv
 {
     internal partial class ConvertRateContainer
     {
-        private IDictionary<AreaUnit, float> AreaRateDic { get; set; }
+        private IDictionary<AreaUnit, decimal> AreaRateDic { get; set; }
 
         private void InitAreaRate()
         {
-            AreaRateDic = new Dictionary<AreaUnit, float>
+            AreaRateDic = new Dictionary<AreaUnit, decimal>
             {
-                { AreaUnit.SquareMeter, 1f },
-                { AreaUnit.SquareDeciMeter, 0.01f },
-                { AreaUnit.SquareCentimeter, 0.0001f },
-                { AreaUnit.SquareMillimeter, 0.000001f },
-                { AreaUnit.Are, 100f },
-                { AreaUnit.Hectare, 10000f },
-                { AreaUnit.SquareKilometer, 1000000f },
-                { AreaUnit.Acre, 0.3048f*0.3048f*16.5f*16.5f*160f},
-                { AreaUnit.SquareMile, 0.3048f*3f*1760f*0.3048f*3f*1760f },
-                { AreaUnit.SquareYard, 0.3048f*0.3048f*9 },
-                { AreaUnit.SquareFoot, 0.3048f*0.3048f },
-                { AreaUnit.SquareInch, 0.3048f*0.3048f/144 },
+                { AreaUnit.SquareMeter, 1m },
+                { AreaUnit.SquareDeciMeter, 0.01m },
+                { AreaUnit.SquareCentimeter, 0.0001m },
+                { AreaUnit.SquareMillimeter, 0.000001m },
+                { AreaUnit.Are, 100m },
+                { AreaUnit.Hectare, 10000m },
+                { AreaUnit.SquareKilometer, 1000000m },
+                { AreaUnit.Acre, 0.3048m*0.3048m*16.5m*16.5m*160m},
+                { AreaUnit.SquareMile, 0.3048m*3m*1760m*0.3048m*3m*1760m },
+                { AreaUnit.SquareYard, 0.3048m*0.3048m*9m },
+                { AreaUnit.SquareFoot, 0.3048m*0.3048m },
+                { AreaUnit.SquareInch, 0.3048m*0.3048m/144m },
             };
         }
     }

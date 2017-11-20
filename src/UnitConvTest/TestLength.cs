@@ -10,7 +10,7 @@ namespace UnitConvTest
         [TestMethod]
         public void TestKiloMeterValue()
         {
-            var kilo = new Length(1.184f, LengthUnit.Kilometer);
+            var kilo = new Length(1.184m, LengthUnit.Kilometer);
             var meter = new Length(1184, LengthUnit.Meter);
             Assert.AreEqual(kilo.Equals(meter), true);
             Assert.AreEqual(kilo.ToMeter().Value, meter.Value);
@@ -21,7 +21,7 @@ namespace UnitConvTest
         [TestMethod]
         public void TestKiloMeterString()
         {
-            var kilo = new Length(100.1415f, LengthUnit.Kilometer);
+            var kilo = new Length(100.1415m, LengthUnit.Kilometer);
             Assert.AreEqual(kilo.ToString(), "100.142km");
             Assert.AreEqual(kilo.ToString(Languages.ChineseSimplify), "100.142千米");
         }

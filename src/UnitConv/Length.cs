@@ -6,13 +6,13 @@ namespace UnitConv
 {
     public class Length : Measurement
     {
-        public Length(float value, LengthUnit unit)
+        public Length(decimal value, LengthUnit unit)
         {
             this.Value = value;
             this.Unit = unit;
         }
 
-        public float Value { get; private set; }
+        public decimal Value { get; private set; }
 
         public LengthUnit Unit { get; private set; }
 

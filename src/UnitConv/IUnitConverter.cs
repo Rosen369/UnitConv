@@ -6,6 +6,6 @@ namespace UnitConv
 {
     public interface IUnitConverter
     {
-        Length ConvertLength(float value, LengthUnit fromUnit, LengthUnit toUnit);
+        Length ConvertLength(decimal value, LengthUnit fromUnit, LengthUnit toUnit);
     }
 }
