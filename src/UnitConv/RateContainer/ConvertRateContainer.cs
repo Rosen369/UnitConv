@@ -1,9 +1,9 @@
-﻿namespace UnitConv
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
+namespace UnitConv
+{
     internal partial class ConvertRateContainer
     {
         static ConvertRateContainer()

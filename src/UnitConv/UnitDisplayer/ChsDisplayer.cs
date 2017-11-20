@@ -1,9 +1,9 @@
-﻿namespace UnitConv
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
+namespace UnitConv
+{
     internal class ChsDisplayer : LanguageDisplayer
     {
         protected override void InitLengthDisplay()

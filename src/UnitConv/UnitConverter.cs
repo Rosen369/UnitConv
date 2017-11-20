@@ -1,9 +1,9 @@
-﻿namespace UnitConv
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
+namespace UnitConv
+{
     public class UnitConverter : IUnitConverter
     {
         public Length ConvertLength(float value, LengthUnit fromUnit, LengthUnit toUnit)

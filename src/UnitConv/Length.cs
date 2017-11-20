@@ -1,9 +1,9 @@
-﻿namespace UnitConv
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
+namespace UnitConv
+{
     public class Length : Measurement
     {
         public Length(float value, LengthUnit unit)
