@@ -6,11 +6,11 @@ namespace UnitConv
 {
     internal partial class ConvertRateContainer
     {
-        private IDictionary<LengthUnit, decimal> LengthRateDic { get; set; }
+        private IDictionary<LengthUnit, decimal> _lengthRateDic;
 
         private void InitLengthRate()
         {
-            LengthRateDic = new Dictionary<LengthUnit, decimal>
+            _lengthRateDic = new Dictionary<LengthUnit, decimal>
             {
                 { LengthUnit.Meter, 1m },
                 { LengthUnit.Kilometer, 1000m },

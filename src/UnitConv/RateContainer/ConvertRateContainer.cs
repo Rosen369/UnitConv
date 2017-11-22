@@ -6,12 +6,7 @@ namespace UnitConv
 {
     internal partial class ConvertRateContainer
     {
-        static ConvertRateContainer()
-        {
-            _instance = new ConvertRateContainer();
-        }
-
-        private static ConvertRateContainer _instance;
+        private static ConvertRateContainer _instance = new ConvertRateContainer();
 
         private ConvertRateContainer()
         {
@@ -22,7 +17,7 @@ namespace UnitConv
         public static decimal GetRate(LengthUnit toUnit)
         {
             var value = 1m;
-            var hasRate = _instance.LengthRateDic.TryGetValue(toUnit, out value);
+            var hasRate = _instance._lengthRateDic.TryGetValue(toUnit, out value);
             if (!hasRate) throw new Exception("convert not supported");
             return value;
         }
@@ -30,7 +25,7 @@ namespace UnitConv
         public static decimal GetRate(AreaUnit toUnit)
         {
             var value = 1m;
-            var hasRate = _instance.AreaRateDic.TryGetValue(toUnit, out value);
+            var hasRate = _instance._areaRateDic.TryGetValue(toUnit, out value);
             if (!hasRate) throw new Exception("convert not supported");
             return value;
         }

@@ -6,27 +6,22 @@ namespace UnitConv
 {
     internal class UnitDisplayer
     {
-        static UnitDisplayer()
-        {
-            Instance = new UnitDisplayer();
-        }
-
         private UnitDisplayer()
         {
-            LanguageContainer = new Dictionary<Languages, LanguageDisplayer>
+            _languageContainer = new Dictionary<Languages, LanguageDisplayer>
             {
                 { Languages.English, new EnDisplayer() },
                 { Languages.ChineseSimplify, new ChsDisplayer() }
             };
         }
 
-        private static UnitDisplayer Instance { get; set; }
+        private static UnitDisplayer _instance = new UnitDisplayer();
 
-        private IDictionary<Languages, LanguageDisplayer> LanguageContainer { get; set; }
+        private IDictionary<Languages, LanguageDisplayer> _languageContainer;
 
         public static string GetDisplay(Languages language, LengthUnit unit)
         {
-            var container = Instance.LanguageContainer[language];
+            var container = _instance._languageContainer[language];
             var display = container.GetLength(unit);
             return display;
         }

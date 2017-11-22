@@ -6,11 +6,11 @@ namespace UnitConv
 {
     internal partial class ConvertRateContainer
     {
-        private IDictionary<AreaUnit, decimal> AreaRateDic { get; set; }
+        private IDictionary<AreaUnit, decimal> _areaRateDic;
 
         private void InitAreaRate()
         {
-            AreaRateDic = new Dictionary<AreaUnit, decimal>
+            _areaRateDic = new Dictionary<AreaUnit, decimal>
             {
                 { AreaUnit.SquareMeter, 1m },
                 { AreaUnit.SquareDeciMeter, 0.01m },
