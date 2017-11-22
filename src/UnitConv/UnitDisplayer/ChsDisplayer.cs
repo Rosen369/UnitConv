@@ -6,6 +6,25 @@ namespace UnitConv
 {
     internal class ChsDisplayer : LanguageDisplayer
     {
+        protected override void InitAreaDisplay()
+        {
+            AreaDic = new Dictionary<AreaUnit, string>
+            {
+               { AreaUnit.SquareMeter,"平方米"},
+               { AreaUnit.SquareDeciMeter,"平方分米"},
+               { AreaUnit.SquareCentimeter,"平方厘米"},
+               { AreaUnit.SquareMillimeter,"平方毫米"},
+               { AreaUnit.Are,"公亩"},
+               { AreaUnit.SquareKilometer,"平方千米"},
+               { AreaUnit.Hectare,"公顷"},
+               { AreaUnit.Acre,"英亩"},
+               { AreaUnit.SquareMile,"平方英里"},
+               { AreaUnit.SquareYard,"平方码"},
+               { AreaUnit.SquareFoot,"平方英尺"},
+               { AreaUnit.SquareInch,"平方英寸"}
+            };
+        }
+
         protected override void InitLengthDisplay()
         {
             LengthDic = new Dictionary<LengthUnit, string>

@@ -6,6 +6,25 @@ namespace UnitConv
 {
     internal class EnDisplayer : LanguageDisplayer
     {
+        protected override void InitAreaDisplay()
+        {
+            AreaDic = new Dictionary<AreaUnit, string>
+            {
+               { AreaUnit.SquareMeter,"m²"},
+               { AreaUnit.SquareDeciMeter,"dm²"},
+               { AreaUnit.SquareCentimeter,"cm²"},
+               { AreaUnit.SquareMillimeter,"mm²"},
+               { AreaUnit.Are,"are"},
+               { AreaUnit.SquareKilometer,"km²"},
+               { AreaUnit.Hectare,"ha"},
+               { AreaUnit.Acre,"acre"},
+               { AreaUnit.SquareMile,"sq.mi"},
+               { AreaUnit.SquareYard,"sq.yd"},
+               { AreaUnit.SquareFoot,"sq.ft"},
+               { AreaUnit.SquareInch,"sq.in"}
+            };
+        }
+
         protected override void InitLengthDisplay()
         {
             LengthDic = new Dictionary<LengthUnit, string>
