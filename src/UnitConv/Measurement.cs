@@ -4,8 +4,12 @@ using System.Text;
 
 namespace UnitConv
 {
-    public abstract class Measurement
+    public abstract class Measurement<T>
     {
+        public abstract decimal Value { get; protected set; }
+
+        public abstract T Unit { get; protected set; }
+
         public override string ToString()
         {
             return this.ToString(Languages.English, 3);

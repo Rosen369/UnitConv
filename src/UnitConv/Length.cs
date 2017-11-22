@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UnitConv
 {
-    public class Length : Measurement
+    public class Length
     {
         public Length(decimal value, LengthUnit unit)
         {
@@ -110,7 +110,22 @@ namespace UnitConv
             return this.ConvertValue(LengthUnit.NauticalMile);
         }
 
-        public override string ToString(Languages language, int digits)
+        public override string ToString()
+        {
+            return this.ToString(Languages.English, 3);
+        }
+
+        public string ToString(int digits)
+        {
+            return this.ToString(Languages.English, digits);
+        }
+
+        public string ToString(Languages language)
+        {
+            return this.ToString(language, 3);
+        }
+
+        public string ToString(Languages language, int digits)
         {
             var value = Math.Round(this.Value, digits).ToString();
             return value + UnitDisplayer.GetDisplay(language, this.Unit);
