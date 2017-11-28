@@ -4,11 +4,13 @@ using System.Text;
 
 namespace UnitConv
 {
-    public abstract class Measurement<T>
+    public abstract class Measurement<TUnit, TChild>
     {
-        public abstract decimal Value { get; protected set; }
+        public decimal Value { get; protected set; }
 
-        public abstract T Unit { get; protected set; }
+        public TUnit Unit { get; protected set; }
+
+        protected internal abstract TChild ConvertValue(TUnit toUnit);
 
         public override string ToString()
         {
@@ -26,5 +28,30 @@ namespace UnitConv
         }
 
         public abstract string ToString(Languages language, int digits);
+        //public string ToString(Languages language, int digits)
+        //{
+        //    var value = Math.Round(this.Value, digits).ToString();
+        //    return value + UnitDisplayer.GetDisplay(language, this.Unit);
+        //}
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is TChild)) return false;
+            return this.Equals(obj as Measurement<TUnit, TChild>);
+        }
+
+        public bool Equals(Measurement<TUnit, TChild> measurement)
+        {
+            var result = measurement.ConvertValue(this.Unit) as Measurement<TUnit, TChild>;
+            return result.Value == this.Value;
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = 1582882615;
+            hashCode = hashCode * -1521134295 + Value.GetHashCode();
+            hashCode = hashCode * -1521134295 + Unit.GetHashCode();
+            return hashCode;
+        }
     }
 }
