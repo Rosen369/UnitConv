@@ -25,5 +25,12 @@ namespace UnitConv
             var display = container.GetLength(unit);
             return display;
         }
+
+        public static string GetDisplay(Languages language, AreaUnit unit)
+        {
+            var container = _instance._languageContainer[language];
+            var display = container.GetArea(unit);
+            return display;
+        }
     }
 }

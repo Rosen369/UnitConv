@@ -84,5 +84,46 @@ namespace UnitConv
         {
             return this.ConvertValue(AreaUnit.SquareYard);
         }
+
+        public override string ToString()
+        {
+            return this.ToString(Languages.English, 3);
+        }
+
+        public string ToString(int digits)
+        {
+            return this.ToString(Languages.English, digits);
+        }
+
+        public string ToString(Languages language)
+        {
+            return this.ToString(language, 3);
+        }
+
+        public string ToString(Languages language, int digits)
+        {
+            var value = Math.Round(this.Value, digits).ToString();
+            return value + UnitDisplayer.GetDisplay(language, this.Unit);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Area)) return false;
+            return this.Equals(obj as Area);
+        }
+
+        public bool Equals(Area length)
+        {
+            var value = length.ConvertValue(this.Unit).Value;
+            return value == this.Value;
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = 1582882615;
+            hashCode = hashCode * -1521134295 + Value.GetHashCode();
+            hashCode = hashCode * -1521134295 + Unit.GetHashCode();
+            return hashCode;
+        }
     }
 }
