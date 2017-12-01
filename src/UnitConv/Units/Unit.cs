@@ -4,17 +4,17 @@ using System.Text;
 
 namespace UnitConv.Units
 {
-    internal abstract class Unit : IUnit
+    public abstract class Unit : IUnit
     {
-        private Unit()
+        protected Unit()
         {
             this.InitRate();
             this.InitDisplay();
         }
 
-        protected readonly decimal _rate;
+        protected decimal _rate;
 
-        protected readonly IDictionary<Languages, string> _display;
+        protected IDictionary<Languages, string> _display;
 
         protected abstract void InitDisplay();
 
