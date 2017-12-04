@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UnitConv.Units
 {
-    interface IUnit
+    public interface IUnit
     {
         decimal GetRate();
 
