@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UnitConv.Units.LengthUnit
+namespace UnitConv.Units.LengthUnits
 {
-    public class Nanometer : LengthUnit
+    public class Fathom : LengthUnit
     {
-        private Nanometer()
+        private Fathom()
         {
 
         }
 
-        private static readonly Nanometer _instance = new Nanometer();
+        private static readonly Fathom _instance = new Fathom();
 
-        public static Nanometer GetInstance()
+        public static Fathom GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "纳米" },
-                { Languages.English, "nm" }
+                { Languages.ChineseSimplify, "英寻" },
+                { Languages.English, "fm" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 0.000000001m;
+            _rate = 1.8288m;
         }
     }
 }

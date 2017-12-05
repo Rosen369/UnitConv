@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UnitConv.Units.LengthUnit
+namespace UnitConv.Units.LengthUnits
 {
-    public class Millimeter : LengthUnit
+    public class Yard : LengthUnit
     {
-        private Millimeter()
+        private Yard()
         {
 
         }
 
-        private static readonly Millimeter _instance = new Millimeter();
+        private static readonly Yard _instance = new Yard();
 
-        public static Millimeter GetInstance()
+        public static Yard GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "毫米" },
-                { Languages.English, "mm" }
+                { Languages.ChineseSimplify, "码" },
+                { Languages.English, "yd" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 0.001m;
+            _rate = 0.304794m * 3m;
         }
     }
 }

@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UnitConv.Units.LengthUnit
+namespace UnitConv.Units.LengthUnits
 {
-    public class Fathom : LengthUnit
+    public class LightYear : LengthUnit
     {
-        private Fathom()
+        private LightYear()
         {
 
         }
 
-        private static readonly Fathom _instance = new Fathom();
+        private static readonly LightYear _instance = new LightYear();
 
-        public static Fathom GetInstance()
+        public static LightYear GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "英寻" },
-                { Languages.English, "fm" }
+                { Languages.ChineseSimplify, "光年" },
+                { Languages.English, "ly" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 1.8288m;
+            _rate = 9460730472580800m;
         }
     }
 }

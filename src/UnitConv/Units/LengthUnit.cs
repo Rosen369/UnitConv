@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using UnitConv.Units;
 
-namespace UnitConv.Units.LengthUnit
+namespace UnitConv
 {
     public abstract class LengthUnit : Unit
     {
@@ -10,7 +11,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.Meter.GetInstance();
+                return Units.LengthUnits.Meter.GetInstance();
             }
         }
 
@@ -18,7 +19,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.Mile.GetInstance();
+                return Units.LengthUnits.Mile.GetInstance();
             }
         }
 
@@ -26,7 +27,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.Kilometer.GetInstance();
+                return Units.LengthUnits.Kilometer.GetInstance();
             }
         }
 
@@ -34,7 +35,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.Centimeter.GetInstance();
+                return Units.LengthUnits.Centimeter.GetInstance();
             }
         }
 
@@ -42,7 +43,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.Decimeter.GetInstance();
+                return Units.LengthUnits.Decimeter.GetInstance();
             }
         }
 
@@ -50,7 +51,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.Millimeter.GetInstance();
+                return Units.LengthUnits.Millimeter.GetInstance();
             }
         }
 
@@ -58,7 +59,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.Micrometer.GetInstance();
+                return Units.LengthUnits.Micrometer.GetInstance();
             }
         }
 
@@ -66,7 +67,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.Nanometer.GetInstance();
+                return Units.LengthUnits.Nanometer.GetInstance();
             }
         }
 
@@ -74,7 +75,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.Picometer.GetInstance();
+                return Units.LengthUnits.Picometer.GetInstance();
             }
         }
 
@@ -82,7 +83,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.LightYear.GetInstance();
+                return Units.LengthUnits.LightYear.GetInstance();
             }
         }
 
@@ -90,7 +91,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.AstronomicalUnit.GetInstance();
+                return Units.LengthUnits.AstronomicalUnit.GetInstance();
             }
         }
 
@@ -98,7 +99,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.Inch.GetInstance();
+                return Units.LengthUnits.Inch.GetInstance();
             }
         }
 
@@ -106,7 +107,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.Foot.GetInstance();
+                return Units.LengthUnits.Foot.GetInstance();
             }
         }
 
@@ -114,7 +115,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.Yard.GetInstance();
+                return Units.LengthUnits.Yard.GetInstance();
             }
         }
 
@@ -122,7 +123,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.Fathom.GetInstance();
+                return Units.LengthUnits.Fathom.GetInstance();
             }
         }
 
@@ -130,7 +131,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.Furlong.GetInstance();
+                return Units.LengthUnits.Furlong.GetInstance();
             }
         }
 
@@ -138,7 +139,7 @@ namespace UnitConv.Units.LengthUnit
         {
             get
             {
-                return Units.LengthUnit.NauticalMile.GetInstance();
+                return Units.LengthUnits.NauticalMile.GetInstance();
             }
         }
     }

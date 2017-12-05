@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UnitConv.Units.LengthUnit
+namespace UnitConv.Units.LengthUnits
 {
-    public class LightYear : LengthUnit
+    public class Micrometer : LengthUnit
     {
-        private LightYear()
+        private Micrometer()
         {
 
         }
 
-        private static readonly LightYear _instance = new LightYear();
+        private static readonly Micrometer _instance = new Micrometer();
 
-        public static LightYear GetInstance()
+        public static Micrometer GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "光年" },
-                { Languages.English, "ly" }
+                { Languages.ChineseSimplify, "微米" },
+                { Languages.English, "um" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 9460730472580800m;
+            _rate = 0.000001m;
         }
     }
 }

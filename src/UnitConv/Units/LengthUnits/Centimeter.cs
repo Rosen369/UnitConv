@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UnitConv.Units.LengthUnit
+namespace UnitConv.Units.LengthUnits
 {
-    public class Inch : LengthUnit
+    public class Centimeter : LengthUnit
     {
-        private Inch()
+        private Centimeter()
         {
 
         }
 
-        private static readonly Inch _instance = new Inch();
+        private static readonly Centimeter _instance = new Centimeter();
 
-        public static Inch GetInstance()
+        public static Centimeter GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "英寸" },
-                { Languages.English, "in" }
+                { Languages.ChineseSimplify, "厘米" },
+                { Languages.English, "cm" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 0.304794m / 12m;
+            _rate = 0.01m;
         }
     }
 }

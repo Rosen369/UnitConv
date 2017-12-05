@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UnitConv.Units.LengthUnit
+namespace UnitConv.Units.LengthUnits
 {
-    public class Foot : LengthUnit
+    public class Nanometer : LengthUnit
     {
-        private Foot()
+        private Nanometer()
         {
 
         }
 
-        private static readonly Foot _instance = new Foot();
+        private static readonly Nanometer _instance = new Nanometer();
 
-        public static Foot GetInstance()
+        public static Nanometer GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "英尺" },
-                { Languages.English, "ft" }
+                { Languages.ChineseSimplify, "纳米" },
+                { Languages.English, "nm" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 0.304794m;
+            _rate = 0.000000001m;
         }
     }
 }

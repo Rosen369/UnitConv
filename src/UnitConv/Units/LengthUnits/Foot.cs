@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UnitConv.Units.LengthUnit
+namespace UnitConv.Units.LengthUnits
 {
-    public class Yard : LengthUnit
+    public class Foot : LengthUnit
     {
-        private Yard()
+        private Foot()
         {
 
         }
 
-        private static readonly Yard _instance = new Yard();
+        private static readonly Foot _instance = new Foot();
 
-        public static Yard GetInstance()
+        public static Foot GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "码" },
-                { Languages.English, "yd" }
+                { Languages.ChineseSimplify, "英尺" },
+                { Languages.English, "ft" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 0.304794m * 3m;
+            _rate = 0.304794m;
         }
     }
 }

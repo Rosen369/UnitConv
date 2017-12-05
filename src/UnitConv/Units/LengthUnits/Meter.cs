@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UnitConv.Units.LengthUnit
+namespace UnitConv.Units.LengthUnits
 {
-    public class Mile : LengthUnit
+    public class Meter : LengthUnit
     {
-        private Mile()
+        private Meter()
         {
 
         }
 
-        private static readonly Mile _instance = new Mile();
+        private static readonly Meter _instance = new Meter();
 
-        public static Mile GetInstance()
+        public static Meter GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "英里" },
-                { Languages.English, "mi" }
+                { Languages.ChineseSimplify, "米" },
+                { Languages.English, "m" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 0.304794m * 3m * 1760m;
+            _rate = 1m;
         }
     }
 }

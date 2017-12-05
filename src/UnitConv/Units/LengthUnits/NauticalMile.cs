@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UnitConv.Units.LengthUnit
+namespace UnitConv.Units.LengthUnits
 {
-    public class Decimeter : LengthUnit
+    public class NauticalMile : LengthUnit
     {
-        private Decimeter()
+        private NauticalMile()
         {
 
         }
 
-        private static readonly Decimeter _instance = new Decimeter();
+        private static readonly NauticalMile _instance = new NauticalMile();
 
-        public static Decimeter GetInstance()
+        public static NauticalMile GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "分米" },
-                { Languages.English, "dm" }
+                { Languages.ChineseSimplify, "海里" },
+                { Languages.English, "nmi" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 0.1m;
+            _rate = 1852m;
         }
     }
 }

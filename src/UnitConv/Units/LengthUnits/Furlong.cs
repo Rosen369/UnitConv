@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UnitConv.Units.LengthUnit
+namespace UnitConv.Units.LengthUnits
 {
-    public class Meter : LengthUnit
+    public class Furlong : LengthUnit
     {
-        private Meter()
+        private Furlong()
         {
 
         }
 
-        private static readonly Meter _instance = new Meter();
+        private static readonly Furlong _instance = new Furlong();
 
-        public static Meter GetInstance()
+        public static Furlong GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "米" },
-                { Languages.English, "m" }
+                { Languages.ChineseSimplify, "弗隆" },
+                { Languages.English, "fur" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 1m;
+            _rate = 201.168m;
         }
     }
 }

@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UnitConv.Units.LengthUnit
+namespace UnitConv.Units.LengthUnits
 {
-    public class NauticalMile : LengthUnit
+    public class Inch : LengthUnit
     {
-        private NauticalMile()
+        private Inch()
         {
 
         }
 
-        private static readonly NauticalMile _instance = new NauticalMile();
+        private static readonly Inch _instance = new Inch();
 
-        public static NauticalMile GetInstance()
+        public static Inch GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "海里" },
-                { Languages.English, "nmi" }
+                { Languages.ChineseSimplify, "英寸" },
+                { Languages.English, "in" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 1852m;
+            _rate = 0.304794m / 12m;
         }
     }
 }

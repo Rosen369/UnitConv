@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UnitConv.Units.LengthUnit
+namespace UnitConv.Units.LengthUnits
 {
-    public class Centimeter : LengthUnit
+    public class Decimeter : LengthUnit
     {
-        private Centimeter()
+        private Decimeter()
         {
 
         }
 
-        private static readonly Centimeter _instance = new Centimeter();
+        private static readonly Decimeter _instance = new Decimeter();
 
-        public static Centimeter GetInstance()
+        public static Decimeter GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "厘米" },
-                { Languages.English, "cm" }
+                { Languages.ChineseSimplify, "分米" },
+                { Languages.English, "dm" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 0.01m;
+            _rate = 0.1m;
         }
     }
 }
