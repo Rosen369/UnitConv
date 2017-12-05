@@ -4,16 +4,16 @@ using System.Text;
 
 namespace UnitConv.Units.LengthUnit
 {
-    public class Meter : LengthUnit
+    public class Inch : LengthUnit
     {
-        private Meter()
+        private Inch()
         {
 
         }
 
-        private static readonly Meter _instance = new Meter();
+        private static readonly Inch _instance = new Inch();
 
-        public static Meter GetInstance()
+        public static Inch GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "米" },
-                { Languages.English, "m" }
+                { Languages.ChineseSimplify, "英寸" },
+                { Languages.English, "in" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 1m;
+            _rate = 0.304794m / 12m;
         }
     }
 }

@@ -4,16 +4,16 @@ using System.Text;
 
 namespace UnitConv.Units.LengthUnit
 {
-    public class Meter : LengthUnit
+    public class Nanometer : LengthUnit
     {
-        private Meter()
+        private Nanometer()
         {
 
         }
 
-        private static readonly Meter _instance = new Meter();
+        private static readonly Nanometer _instance = new Nanometer();
 
-        public static Meter GetInstance()
+        public static Nanometer GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "米" },
-                { Languages.English, "m" }
+                { Languages.ChineseSimplify, "纳米" },
+                { Languages.English, "nm" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 1m;
+            _rate = 0.000000001m;
         }
     }
 }

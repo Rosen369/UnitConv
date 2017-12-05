@@ -4,16 +4,16 @@ using System.Text;
 
 namespace UnitConv.Units.LengthUnit
 {
-    public class Meter : LengthUnit
+    public class Yard : LengthUnit
     {
-        private Meter()
+        private Yard()
         {
 
         }
 
-        private static readonly Meter _instance = new Meter();
+        private static readonly Yard _instance = new Yard();
 
-        public static Meter GetInstance()
+        public static Yard GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "米" },
-                { Languages.English, "m" }
+                { Languages.ChineseSimplify, "码" },
+                { Languages.English, "yd" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 1m;
+            _rate = 0.304794m * 3m;
         }
     }
 }

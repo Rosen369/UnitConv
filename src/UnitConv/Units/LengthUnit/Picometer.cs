@@ -4,16 +4,16 @@ using System.Text;
 
 namespace UnitConv.Units.LengthUnit
 {
-    public class Meter : LengthUnit
+    public class Picometer : LengthUnit
     {
-        private Meter()
+        private Picometer()
         {
 
         }
 
-        private static readonly Meter _instance = new Meter();
+        private static readonly Picometer _instance = new Picometer();
 
-        public static Meter GetInstance()
+        public static Picometer GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "米" },
-                { Languages.English, "m" }
+                { Languages.ChineseSimplify, "皮米" },
+                { Languages.English, "pm" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 1m;
+            _rate = 0.000000000001m;
         }
     }
 }

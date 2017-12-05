@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using UnitConv.Units.LengthUnit;
 
 namespace UnitConv
 {
@@ -19,8 +20,8 @@ namespace UnitConv
         internal Length ConvertValue(LengthUnit toUnit)
         {
             if (toUnit == this.Unit) return this;
-            var basicRate = ConvertRateContainer.GetRate(this.Unit);
-            var rate = ConvertRateContainer.GetRate(toUnit);
+            var basicRate = this.Unit.GetRate();
+            var rate = toUnit.GetRate();
             var targetValue = Value * basicRate / rate;
             return new Length(targetValue, toUnit);
         }
@@ -128,7 +129,7 @@ namespace UnitConv
         public string ToString(Languages language, int digits)
         {
             var value = Math.Round(this.Value, digits).ToString();
-            return value + UnitDisplayer.GetDisplay(language, this.Unit);
+            return value + this.Unit.GetDisplay(language);
         }
 
         public override bool Equals(object obj)

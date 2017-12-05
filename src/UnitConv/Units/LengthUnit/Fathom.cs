@@ -4,16 +4,16 @@ using System.Text;
 
 namespace UnitConv.Units.LengthUnit
 {
-    public class Meter : LengthUnit
+    public class Fathom : LengthUnit
     {
-        private Meter()
+        private Fathom()
         {
 
         }
 
-        private static readonly Meter _instance = new Meter();
+        private static readonly Fathom _instance = new Fathom();
 
-        public static Meter GetInstance()
+        public static Fathom GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "米" },
-                { Languages.English, "m" }
+                { Languages.ChineseSimplify, "英寻" },
+                { Languages.English, "fm" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 1m;
+            _rate = 1.8288m;
         }
     }
 }

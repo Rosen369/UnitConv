@@ -4,16 +4,16 @@ using System.Text;
 
 namespace UnitConv.Units.LengthUnit
 {
-    public class Meter : LengthUnit
+    public class Kilometer : LengthUnit
     {
-        private Meter()
+        private Kilometer()
         {
 
         }
 
-        private static readonly Meter _instance = new Meter();
+        private static readonly Kilometer _instance = new Kilometer();
 
-        public static Meter GetInstance()
+        public static Kilometer GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "米" },
-                { Languages.English, "m" }
+                { Languages.ChineseSimplify, "千米" },
+                { Languages.English, "km" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 1m;
+            _rate = 1000m;
         }
     }
 }

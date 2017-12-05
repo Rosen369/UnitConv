@@ -4,16 +4,16 @@ using System.Text;
 
 namespace UnitConv.Units.LengthUnit
 {
-    public class Meter : LengthUnit
+    public class AstronomicalUnit : LengthUnit
     {
-        private Meter()
+        private AstronomicalUnit()
         {
 
         }
 
-        private static readonly Meter _instance = new Meter();
+        private static readonly AstronomicalUnit _instance = new AstronomicalUnit();
 
-        public static Meter GetInstance()
+        public static AstronomicalUnit GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "米" },
-                { Languages.English, "m" }
+                { Languages.ChineseSimplify, "天文单位" },
+                { Languages.English, "AU" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 1m;
+            _rate = 149597870700m;
         }
     }
 }

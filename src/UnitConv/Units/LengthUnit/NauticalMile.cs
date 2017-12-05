@@ -4,16 +4,16 @@ using System.Text;
 
 namespace UnitConv.Units.LengthUnit
 {
-    public class Meter : LengthUnit
+    public class NauticalMile : LengthUnit
     {
-        private Meter()
+        private NauticalMile()
         {
 
         }
 
-        private static readonly Meter _instance = new Meter();
+        private static readonly NauticalMile _instance = new NauticalMile();
 
-        public static Meter GetInstance()
+        public static NauticalMile GetInstance()
         {
             return _instance;
         }
@@ -22,14 +22,14 @@ namespace UnitConv.Units.LengthUnit
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "米" },
-                { Languages.English, "m" }
+                { Languages.ChineseSimplify, "海里" },
+                { Languages.English, "nmi" }
             };
         }
 
         protected override void InitRate()
         {
-            _rate = 1m;
+            _rate = 1852m;
         }
     }
 }
