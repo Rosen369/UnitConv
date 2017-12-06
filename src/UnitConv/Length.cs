@@ -12,6 +12,19 @@ namespace UnitConv
             this.Unit = unit;
         }
 
+        public Length(string length)
+        {
+            var result = Util.SplitQuantity(length);
+            this.Value = Util.ConvertValue(result.Item1);
+            this.Unit = Util.ConvertUnit(result.Item2) as LengthUnit;
+        }
+
+        public Length(string value, string unit)
+        {
+            this.Value = Util.ConvertValue(value);
+            this.Unit = Util.ConvertUnit(unit) as LengthUnit;
+        }
+
         public decimal Value { get; private set; }
 
         public LengthUnit Unit { get; private set; }
