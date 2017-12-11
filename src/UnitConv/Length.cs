@@ -14,15 +14,15 @@ namespace UnitConv
 
         public Length(string length)
         {
-            var result = Util.SplitQuantity(length);
-            this.Value = Util.ConvertValue(result.Item1);
-            this.Unit = Util.ConvertUnit(result.Item2) as LengthUnit;
+            var result = Util.ConvertQuantity<LengthUnit>(length);
+            this.Value = result.Number;
+            this.Unit = result.Unit;
         }
 
         public Length(string value, string unit)
         {
             this.Value = Util.ConvertValue(value);
-            this.Unit = Util.ConvertUnit(unit) as LengthUnit;
+            this.Unit = Util.ConvertUnit<LengthUnit>(unit);
         }
 
         public decimal Value { get; private set; }
