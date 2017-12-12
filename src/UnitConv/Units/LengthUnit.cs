@@ -142,5 +142,38 @@ namespace UnitConv
                 return Units.LengthUnits.NauticalMile.GetInstance();
             }
         }
+
+        private static IList<LengthUnit> _lengthUnits;
+
+        public static IList<LengthUnit> LengthUnits
+        {
+            get
+            {
+                if (_lengthUnits == null)
+                {
+                    _lengthUnits = new List<LengthUnit>
+                    {
+                        AstronomicalUnit,
+                        Centimeter,
+                        Decimeter,
+                        Fathom,
+                        Foot,
+                        Furlong,
+                        Inch,
+                        Kilometer,
+                        LightYear,
+                        Meter,
+                        Micrometer,
+                        Mile,
+                        Millimeter,
+                        Nanometer,
+                        NauticalMile,
+                        Picometer,
+                        Yard,
+                    };
+                }
+                return _lengthUnits;
+            }
+        }
     }
 }

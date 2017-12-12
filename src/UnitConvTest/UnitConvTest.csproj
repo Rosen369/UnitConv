@@ -51,6 +51,7 @@
     <Compile Include="TestArea.cs" />
     <Compile Include="TestLength.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -15,8 +15,9 @@ namespace UnitConv
 
         public static T ConvertUnit<T>(string unit) where T : Unit
         {
-            //var typeDic =;
-            var result = LengthUnit.Meter;
+            var typeDic = Unit.TypeDictionary;
+            if (!typeDic.ContainsKey(unit)) throw new Exception("Invalid unit type!");
+            var result = typeDic[unit];
             return result as T;
         }
 
