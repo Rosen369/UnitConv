@@ -15,9 +15,9 @@ namespace UnitConv
 
         public static T ConvertUnit<T>(string unit) where T : Unit
         {
-            var typeDic = Unit.TypeDictionary;
-            if (!typeDic.ContainsKey(unit)) throw new Exception("Invalid unit type!");
-            var result = typeDic[unit];
+            var dic = UnitContainer.UnitDic;
+            if (!dic.ContainsKey(unit)) throw new Exception("Invalid unit type!");
+            var result = dic[unit];
             return result as T;
         }
 

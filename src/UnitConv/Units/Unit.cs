@@ -16,20 +16,6 @@ namespace UnitConv.Units
 
         protected IDictionary<Languages, string> _display;
 
-        private static IDictionary<string, Unit> _typeDictionary;
-
-        internal static IDictionary<string, Unit> TypeDictionary
-        {
-            get
-            {
-                if (_typeDictionary == null)
-                {
-                    InitTypeDictionary();
-                }
-                return _typeDictionary;
-            }
-        }
-
         protected abstract void InitDisplay();
 
         protected abstract void InitRate();
@@ -45,14 +31,6 @@ namespace UnitConv.Units
         {
             if (_rate == 0) throw new Exception("rate has not been initialized");
             return _rate;
-        }
-        private static void InitTypeDictionary()
-        {
-            _typeDictionary = new Dictionary<string, Unit>();
-            foreach (var unit in LengthUnit.LengthUnits)
-            {
-                _typeDictionary.Add(unit.GetDisplay(Languages.English), unit);
-            }
         }
     }
 }

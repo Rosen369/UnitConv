@@ -6,8 +6,8 @@ namespace UnitConv
 {
     public interface IUnitConverter
     {
-        ILength ConvertLength(decimal value, LengthUnit fromUnit, LengthUnit toUnit);
+        Length ConvertLength(decimal value, LengthUnit fromUnit, LengthUnit toUnit);
 
-        IArea ConvertLength(decimal value, AreaUnit fromUnit, AreaUnit toUnit);
+        Area ConvertLength(decimal value, AreaUnit fromUnit, AreaUnit toUnit);
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UnitConv
 {
-    public class Length : ILength
+    public class Length
     {
         public Length(decimal value, LengthUnit unit)
         {
@@ -38,87 +38,87 @@ namespace UnitConv
             return new Length(targetValue, toUnit);
         }
 
-        public ILength ToMile()
+        public Length ToMile()
         {
             return this.ConvertValue(LengthUnit.Mile);
         }
 
-        public ILength ToMeter()
+        public Length ToMeter()
         {
             return this.ConvertValue(LengthUnit.Meter);
         }
 
-        public ILength ToKilometer()
+        public Length ToKilometer()
         {
             return this.ConvertValue(LengthUnit.Kilometer);
         }
 
-        public ILength ToCentimeter()
+        public Length ToCentimeter()
         {
             return this.ConvertValue(LengthUnit.Centimeter);
         }
 
-        public ILength ToDecimeter()
+        public Length ToDecimeter()
         {
             return this.ConvertValue(LengthUnit.Decimeter);
         }
 
-        public ILength ToMillimeter()
+        public Length ToMillimeter()
         {
             return this.ConvertValue(LengthUnit.Millimeter);
         }
 
-        public ILength ToMicrometer()
+        public Length ToMicrometer()
         {
             return this.ConvertValue(LengthUnit.Micrometer);
         }
 
-        public ILength ToNanometer()
+        public Length ToNanometer()
         {
             return this.ConvertValue(LengthUnit.Nanometer);
         }
 
-        public ILength ToPicometer()
+        public Length ToPicometer()
         {
             return this.ConvertValue(LengthUnit.Picometer);
         }
 
-        public ILength ToLightYear()
+        public Length ToLightYear()
         {
             return this.ConvertValue(LengthUnit.LightYear);
         }
 
-        public ILength ToAstronomicalUnit()
+        public Length ToAstronomicalUnit()
         {
             return this.ConvertValue(LengthUnit.AstronomicalUnit);
         }
 
-        public ILength ToInch()
+        public Length ToInch()
         {
             return this.ConvertValue(LengthUnit.Inch);
         }
 
-        public ILength ToFoot()
+        public Length ToFoot()
         {
             return this.ConvertValue(LengthUnit.Foot);
         }
 
-        public ILength ToYard()
+        public Length ToYard()
         {
             return this.ConvertValue(LengthUnit.Yard);
         }
 
-        public ILength ToFathom()
+        public Length ToFathom()
         {
             return this.ConvertValue(LengthUnit.Fathom);
         }
 
-        public ILength ToFurlong()
+        public Length ToFurlong()
         {
             return this.ConvertValue(LengthUnit.Furlong);
         }
 
-        public ILength ToNauticalMile()
+        public Length ToNauticalMile()
         {
             return this.ConvertValue(LengthUnit.NauticalMile);
         }

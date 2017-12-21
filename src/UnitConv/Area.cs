@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UnitConv
 {
-    public class Area : IArea
+    public class Area
     {
         public Area(decimal value, AreaUnit unit)
         {
@@ -25,62 +25,62 @@ namespace UnitConv
             return new Area(targetValue, toUnit);
         }
 
-        public IArea ToAcre()
+        public Area ToAcre()
         {
             return this.ConvertValue(AreaUnit.Acre);
         }
 
-        public IArea ToAre()
+        public Area ToAre()
         {
             return this.ConvertValue(AreaUnit.Are);
         }
 
-        public IArea ToHectare()
+        public Area ToHectare()
         {
             return this.ConvertValue(AreaUnit.Hectare);
         }
 
-        public IArea ToSquareCentimeter()
+        public Area ToSquareCentimeter()
         {
             return this.ConvertValue(AreaUnit.SquareCentimeter);
         }
 
-        public IArea ToSquareDeciMeter()
+        public Area ToSquareDeciMeter()
         {
             return this.ConvertValue(AreaUnit.SquareDeciMeter);
         }
 
-        public IArea ToSquareFoot()
+        public Area ToSquareFoot()
         {
             return this.ConvertValue(AreaUnit.SquareFoot);
         }
 
-        public IArea ToSquareInch()
+        public Area ToSquareInch()
         {
             return this.ConvertValue(AreaUnit.SquareInch);
         }
 
-        public IArea ToSquareKilometer()
+        public Area ToSquareKilometer()
         {
             return this.ConvertValue(AreaUnit.SquareKilometer);
         }
 
-        public IArea ToSquareMeter()
+        public Area ToSquareMeter()
         {
             return this.ConvertValue(AreaUnit.SquareMeter);
         }
 
-        public IArea ToSquareMile()
+        public Area ToSquareMile()
         {
             return this.ConvertValue(AreaUnit.SquareMile);
         }
 
-        public IArea ToSquareMillimeter()
+        public Area ToSquareMillimeter()
         {
             return this.ConvertValue(AreaUnit.SquareMillimeter);
         }
 
-        public IArea ToSquareYard()
+        public Area ToSquareYard()
         {
             return this.ConvertValue(AreaUnit.SquareYard);
         }
