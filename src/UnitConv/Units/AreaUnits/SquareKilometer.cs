@@ -22,7 +22,7 @@ namespace UnitConv.Units.AreaUnits
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "平方千米" },
+                { Languages.Chinese, "平方千米" },
                 { Languages.English, "km²" }
             };
         }

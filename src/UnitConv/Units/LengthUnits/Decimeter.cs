@@ -22,7 +22,7 @@ namespace UnitConv.Units.LengthUnits
         {
             _display = new Dictionary<Languages, string>
             {
-                { Languages.ChineseSimplify, "分米" },
+                { Languages.Chinese, "分米" },
                 { Languages.English, "dm" }
             };
         }

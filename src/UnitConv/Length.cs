@@ -31,10 +31,10 @@ namespace UnitConv
 
         internal Length ConvertValue(LengthUnit toUnit)
         {
-            if (toUnit == this.Unit) return this;
+            if (toUnit == this.Unit) new Length(this.Value, toUnit); ;
             var basicRate = this.Unit.GetRate();
             var rate = toUnit.GetRate();
-            var targetValue = Value * basicRate / rate;
+            var targetValue = this.Value * basicRate / rate;
             return new Length(targetValue, toUnit);
         }
 

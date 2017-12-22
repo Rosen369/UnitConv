@@ -24,7 +24,7 @@ namespace UnitConvTest
         {
             var sqMile = new Area(100.1415m, AreaUnit.SquareMile);
             Assert.AreEqual(sqMile.ToString(), "100.142sq.mi");
-            Assert.AreEqual(sqMile.ToString(Languages.ChineseSimplify), "100.142平方英里");
+            Assert.AreEqual(sqMile.ToString(Languages.Chinese), "100.142平方英里");
         }
     }
 }

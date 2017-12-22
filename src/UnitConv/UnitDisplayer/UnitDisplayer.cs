@@ -12,7 +12,7 @@ namespace UnitConv
             _languageContainer = new Dictionary<Languages, LanguageDisplayer>
             {
                 { Languages.English, new EnDisplayer() },
-                { Languages.ChineseSimplify, new ChsDisplayer() }
+                { Languages.Chinese, new ChsDisplayer() }
             };
         }
 

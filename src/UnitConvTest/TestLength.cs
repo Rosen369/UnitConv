@@ -23,7 +23,7 @@ namespace UnitConvTest
         {
             var kilo = new Length(100.1415m, LengthUnit.Kilometer);
             Assert.AreEqual(kilo.ToString(), "100.142km");
-            Assert.AreEqual(kilo.ToString(Languages.ChineseSimplify), "100.142千米");
+            Assert.AreEqual(kilo.ToString(Languages.Chinese), "100.142千米");
         }
     }
 }

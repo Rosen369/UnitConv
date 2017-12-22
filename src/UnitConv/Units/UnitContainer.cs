@@ -64,7 +64,7 @@ namespace UnitConv.Units
             foreach (var unit in LengthUnits)
             {
                 _unitDic.Add(unit.GetDisplay(Languages.English), unit);
-                _unitDic.Add(unit.GetDisplay(Languages.ChineseSimplify), unit);
+                _unitDic.Add(unit.GetDisplay(Languages.Chinese), unit);
             }
         }
     }

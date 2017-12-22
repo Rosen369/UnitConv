@@ -6,7 +6,7 @@ namespace UnitConv
 {
     public enum Languages
     {
-        ChineseSimplify,
+        Chinese,
         English
     }
 }
