@@ -33,7 +33,7 @@ namespace UnitConv
 
         protected internal override Area ConvertValue(AreaUnit toUnit)
         {
-            if (toUnit == this.Unit) new Area(this.Value, toUnit); ;
+            if (toUnit == this.Unit) new Area(this.Value, toUnit);
             var basicRate = this.Unit.GetRate();
             var rate = toUnit.GetRate();
             var targetValue = this.Value * basicRate / rate;
