@@ -21,6 +21,16 @@ namespace UnitConv
 
         }
 
+        public Area(decimal value, string unit) : base(value, unit)
+        {
+
+        }
+
+        public Area(string value, AreaUnit unit) : base(value, unit)
+        {
+
+        }
+
         protected internal override Area ConvertValue(AreaUnit toUnit)
         {
             if (toUnit == this.Unit) new Area(this.Value, toUnit); ;

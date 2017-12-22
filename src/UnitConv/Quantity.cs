@@ -26,6 +26,18 @@ namespace UnitConv
             this.Unit = Util.ConvertUnit<TUnit>(unit);
         }
 
+        public Quantity(decimal value, string unit)
+        {
+            this.Value = value;
+            this.Unit = Util.ConvertUnit<TUnit>(unit);
+        }
+
+        public Quantity(string value, TUnit unit)
+        {
+            this.Value = Util.ConvertValue(value);
+            this.Unit = unit;
+        }
+
         public decimal Value { get; protected set; }
 
         public TUnit Unit { get; protected set; }

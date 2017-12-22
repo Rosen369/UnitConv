@@ -8,6 +8,18 @@ namespace UnitConv
     {
         Length ConvertLength(decimal value, LengthUnit fromUnit, LengthUnit toUnit);
 
-        Area ConvertLength(decimal value, AreaUnit fromUnit, AreaUnit toUnit);
+        Length ConvertLength(decimal value, string fromUnit, string toUnit);
+
+        Length ConvertLength(string length, LengthUnit toUnit);
+
+        Length ConvertLength(string length, string toUnit);
+
+        Area ConvertArea(decimal value, AreaUnit fromUnit, AreaUnit toUnit);
+
+        Area ConvertArea(decimal value, string fromUnit, string toUnit);
+
+        Area ConvertArea(string area, AreaUnit toUnit);
+
+        Area ConvertArea(string area, string toUnit);
     }
 }

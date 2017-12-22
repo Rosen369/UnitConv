@@ -4,32 +4,34 @@ using System.Text;
 
 namespace UnitConv
 {
-    public class Length
+    public class Length : Quantity<LengthUnit, Length>
     {
-        public Length(decimal value, LengthUnit unit)
+        public Length(decimal value, LengthUnit unit) : base(value, unit)
         {
-            this.Value = value;
-            this.Unit = unit;
+
         }
 
-        public Length(string length)
+        public Length(string length) : base(length)
         {
-            var result = Util.ConvertQuantity<LengthUnit>(length);
-            this.Value = result.Number;
-            this.Unit = result.Unit;
+
         }
 
-        public Length(string value, string unit)
+        public Length(string value, string unit) : base(value, unit)
         {
-            this.Value = Util.ConvertValue(value);
-            this.Unit = Util.ConvertUnit<LengthUnit>(unit);
+
         }
 
-        public decimal Value { get; private set; }
+        public Length(decimal value, string unit) : base(value, unit)
+        {
 
-        public LengthUnit Unit { get; private set; }
+        }
 
-        internal Length ConvertValue(LengthUnit toUnit)
+        public Length(string value, LengthUnit unit) : base(value, unit)
+        {
+
+        }
+
+        protected internal override Length ConvertValue(LengthUnit toUnit)
         {
             if (toUnit == this.Unit) new Length(this.Value, toUnit); ;
             var basicRate = this.Unit.GetRate();
