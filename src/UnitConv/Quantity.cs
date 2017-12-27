@@ -44,6 +44,11 @@ namespace UnitConv
 
         protected internal abstract TChild ConvertValue(TUnit toUnit);
 
+        public TChild ConvertTo(TUnit toUnit)
+        {
+            return this.ConvertValue(toUnit);
+        }
+
         public override string ToString()
         {
             return this.ToString(Languages.English, 3);

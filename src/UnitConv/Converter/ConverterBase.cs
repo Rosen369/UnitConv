@@ -32,5 +32,10 @@ namespace UnitConv.Converter
             var item = Activator.CreateInstance(typeof(TQuantity), quantity) as TQuantity;
             return item.ConvertValue(toUnit);
         }
+
+        public TQuantity Convert(TQuantity quantity, TUnit toUnit)
+        {
+            return quantity.ConvertValue(toUnit);
+        }
     }
 }
