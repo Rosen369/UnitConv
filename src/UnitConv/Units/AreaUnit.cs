@@ -5,6 +5,9 @@ using UnitConv.Units;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// area unit container
+    /// </summary>
     public abstract class AreaUnit : Unit
     {
         public static AreaUnit Acre

@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UnitConv.Converter
 {
+    /// <summary>
+    /// length unit converter 
+    /// </summary>
     public class LengthConverter : ConverterBase<Length, LengthUnit>
     {
         private LengthConverter()

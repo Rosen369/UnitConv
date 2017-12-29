@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UnitConv.Units
 {
+    /// <summary>
+    /// base class of unit
+    /// </summary>
     public abstract class Unit : IUnit
     {
         protected Unit()

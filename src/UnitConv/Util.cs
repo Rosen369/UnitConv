@@ -6,6 +6,9 @@ using UnitConv.Units;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// helper class handle string input
+    /// </summary>
     public static class Util
     {
         public static decimal ConvertValue(string value)

@@ -5,6 +5,11 @@ using UnitConv.Units;
 
 namespace UnitConv.Converter
 {
+    /// <summary>
+    /// unit converter base
+    /// </summary>
+    /// <typeparam name="TQuantity">quantity type to convert</typeparam>
+    /// <typeparam name="TUnit">quantity unit type</typeparam>
     public abstract class ConverterBase<TQuantity, TUnit> where TQuantity : Quantity<TUnit, TQuantity> where TUnit : Unit
     {
         public TQuantity Convert(decimal value, TUnit fromUnit, TUnit toUnit)

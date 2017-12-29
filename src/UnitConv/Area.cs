@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// quantity type of area
+    /// </summary>
     public class Area : Quantity<AreaUnit, Area>
     {
         public Area(decimal value, AreaUnit unit) : base(value, unit)

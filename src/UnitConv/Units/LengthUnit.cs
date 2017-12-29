@@ -5,6 +5,9 @@ using UnitConv.Units;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// length unit container
+    /// </summary>
     public abstract class LengthUnit : Unit
     {
         public static LengthUnit Meter

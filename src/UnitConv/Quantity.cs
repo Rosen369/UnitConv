@@ -5,6 +5,11 @@ using UnitConv.Units;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// base class of quantity
+    /// </summary>
+    /// <typeparam name="TUnit">specific quantity unit</typeparam>
+    /// <typeparam name="TChild">specific quantity type</typeparam>
     public abstract class Quantity<TUnit, TChild> where TUnit : Unit where TChild : Quantity<TUnit, TChild>
     {
         public Quantity(decimal value, TUnit unit)

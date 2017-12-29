@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// quantity type of length
+    /// </summary>
     public class Length : Quantity<LengthUnit, Length>
     {
         public Length(decimal value, LengthUnit unit) : base(value, unit)

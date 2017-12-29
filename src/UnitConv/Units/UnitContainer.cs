@@ -4,11 +4,16 @@ using System.Text;
 
 namespace UnitConv.Units
 {
+    /// <summary>
+    /// container of all units
+    /// </summary>
     internal class UnitContainer
     {
         private static IDictionary<string, Unit> _unitDic;
 
         private static IList<LengthUnit> _lengthUnits;
+
+        private static IList<AreaUnit> _areaUnits;
 
         internal static IDictionary<string, Unit> UnitDic
         {
@@ -31,6 +36,18 @@ namespace UnitConv.Units
                     InitLengthList();
                 }
                 return _lengthUnits;
+            }
+        }
+
+        public static IList<AreaUnit> AreaUnits
+        {
+            get
+            {
+                if (_areaUnits == null)
+                {
+                    InitAreaList();
+                }
+                return _areaUnits;
             }
         }
 
@@ -58,10 +75,34 @@ namespace UnitConv.Units
                     };
         }
 
+        private static void InitAreaList()
+        {
+            _areaUnits = new List<AreaUnit>
+                    {
+                        AreaUnit.Acre,
+                        AreaUnit.Are,
+                        AreaUnit.Hectare,
+                        AreaUnit.SquareCentimeter,
+                        AreaUnit.SquareDeciMeter,
+                        AreaUnit.SquareFoot,
+                        AreaUnit.SquareInch,
+                        AreaUnit.SquareKilometer,
+                        AreaUnit.SquareMeter,
+                        AreaUnit.SquareMile,
+                        AreaUnit.SquareMillimeter,
+                        AreaUnit.SquareYard,
+                    };
+        }
+
         private static void InitUnitDic()
         {
             _unitDic = new Dictionary<string, Unit>();
             foreach (var unit in LengthUnits)
+            {
+                _unitDic.Add(unit.GetDisplay(Languages.English), unit);
+                _unitDic.Add(unit.GetDisplay(Languages.Chinese), unit);
+            }
+            foreach (var unit in AreaUnits)
             {
                 _unitDic.Add(unit.GetDisplay(Languages.English), unit);
                 _unitDic.Add(unit.GetDisplay(Languages.Chinese), unit);

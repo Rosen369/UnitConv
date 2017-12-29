@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// available display languages
+    /// </summary>
     public enum Languages
     {
         Chinese,
