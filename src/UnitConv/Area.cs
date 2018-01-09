@@ -11,27 +11,22 @@ namespace UnitConv
     {
         public Area(decimal value, AreaUnit unit) : base(value, unit)
         {
-
         }
 
-        public Area(string area) : base(area)
+        public Area(string quantity) : base(quantity)
         {
-
         }
 
         public Area(string value, string unit) : base(value, unit)
         {
-
         }
 
         public Area(decimal value, string unit) : base(value, unit)
         {
-
         }
 
         public Area(string value, AreaUnit unit) : base(value, unit)
         {
-
         }
 
         protected internal override Area ConvertValue(AreaUnit toUnit)

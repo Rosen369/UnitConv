@@ -11,27 +11,22 @@ namespace UnitConv
     {
         public Length(decimal value, LengthUnit unit) : base(value, unit)
         {
-
         }
 
-        public Length(string length) : base(length)
+        public Length(string quantity) : base(quantity)
         {
-
         }
 
         public Length(string value, string unit) : base(value, unit)
         {
-
         }
 
         public Length(decimal value, string unit) : base(value, unit)
         {
-
         }
 
         public Length(string value, LengthUnit unit) : base(value, unit)
         {
-
         }
 
         protected internal override Length ConvertValue(LengthUnit toUnit)
