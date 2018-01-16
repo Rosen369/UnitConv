@@ -56,17 +56,17 @@ namespace UnitConv
 
         public override string ToString()
         {
-            return this.ToString(Languages.English, 3);
+            return this.ToString(UnitConvSettings.DefaultLanguage, UnitConvSettings.DefaultDigits);
         }
 
         public virtual string ToString(int digits)
         {
-            return this.ToString(Languages.English, digits);
+            return this.ToString(UnitConvSettings.DefaultLanguage, digits);
         }
 
         public virtual string ToString(Languages language)
         {
-            return this.ToString(language, 3);
+            return this.ToString(language, UnitConvSettings.DefaultDigits);
         }
 
         public virtual string ToString(Languages language, int digits)
