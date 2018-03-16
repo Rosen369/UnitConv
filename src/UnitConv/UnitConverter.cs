@@ -18,6 +18,78 @@ namespace UnitConv
                 return LengthConverter.GetInstance();
             }
         }
+
+        public static AreaConverter Area
+        {
+            get
+            {
+                return AreaConverter.GetInstance();
+            }
+        }
+
+        public static DataConverter Data
+        {
+            get
+            {
+                return DataConverter.GetInstance();
+            }
+        }
+
+        public static PowerConverter Power
+        {
+            get
+            {
+                return PowerConverter.GetInstance();
+            }
+        }
+
+        public static PressureConverter Pressure
+        {
+            get
+            {
+                return PressureConverter.GetInstance();
+            }
+        }
+
+        public static SpeedConverter Speed
+        {
+            get
+            {
+                return SpeedConverter.GetInstance();
+            }
+        }
+
+        public static StrengthConverter Strength
+        {
+            get
+            {
+                return StrengthConverter.GetInstance();
+            }
+        }
+
+        public static VolumeConverter Volume
+        {
+            get
+            {
+                return VolumeConverter.GetInstance();
+            }
+        }
+
+        public static WeightConverter Weight
+        {
+            get
+            {
+                return WeightConverter.GetInstance();
+            }
+        }
+
+        public static WorkConverter Work
+        {
+            get
+            {
+                return WorkConverter.GetInstance();
+            }
+        }
     }
 }
 
