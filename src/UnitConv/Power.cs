@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// quantity type of power
+    /// </summary>
     public class Power : Quantity<PowerUnit, Power>
     {
         public Power(string quantity) : base(quantity)

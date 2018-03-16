@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// quantity type of strength
+    /// </summary>
     public class Strength : Quantity<StrengthUnit, Strength>
     {
         public Strength(string quantity) : base(quantity)

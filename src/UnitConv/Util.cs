@@ -11,11 +11,22 @@ namespace UnitConv
     /// </summary>
     public static class Util
     {
+        /// <summary>
+        /// convert a string value into decimal
+        /// </summary>
+        /// <param name="value">value in string</param>
+        /// <returns></returns>
         public static decimal ConvertValue(string value)
         {
             return Convert.ToDecimal(value);
         }
 
+        /// <summary>
+        /// convert a string unit into unit type
+        /// </summary>
+        /// <typeparam name="T">type of unit to convert</typeparam>
+        /// <param name="unit">string value of unit type</param>
+        /// <returns></returns>
         public static T ConvertUnit<T>(string unit) where T : Unit
         {
             var dic = UnitContainer.UnitDic;
@@ -24,6 +35,11 @@ namespace UnitConv
             return result as T;
         }
 
+        /// <summary>
+        /// split a quantity value into number string and unit string
+        /// </summary>
+        /// <param name="quantity">string quantity value</param>
+        /// <returns></returns>
         public static (string Number, string Unit) SplitQuantity(string quantity)
         {
             var number = Regex.Match(quantity, @"^\d+\.?\d*").Value;
@@ -33,6 +49,12 @@ namespace UnitConv
             return (number, unit);
         }
 
+        /// <summary>
+        /// split a quantity value into decicmal and unit
+        /// </summary>
+        /// <typeparam name="T">type of unit to convert</typeparam>
+        /// <param name="quantity">string quantity value</param>
+        /// <returns></returns>
         public static (decimal Number, T Unit) ConvertQuantity<T>(string quantity) where T : Unit
         {
             var splitResult = SplitQuantity(quantity);

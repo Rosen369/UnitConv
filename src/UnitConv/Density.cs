@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// quantity type of density
+    /// </summary>
     public class Density : Quantity<DensityUnit, Density>
     {
         public Density(string quantity) : base(quantity)

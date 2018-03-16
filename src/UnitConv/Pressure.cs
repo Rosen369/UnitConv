@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// quantity type of pressure
+    /// </summary>
     public class Pressure : Quantity<PressureUnit, Pressure>
     {
         public Pressure(string quantity) : base(quantity)

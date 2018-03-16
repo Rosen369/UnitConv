@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// quantity type of speed
+    /// </summary>
     public class Speed : Quantity<SpeedUnit, Speed>
     {
         public Speed(string quantity) : base(quantity)

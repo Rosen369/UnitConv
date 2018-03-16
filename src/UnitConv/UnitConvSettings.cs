@@ -4,12 +4,19 @@ using System.Text;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// settings of unit convision
+    /// </summary>
     public static class UnitConvSettings
     {
         private static Languages _defaultLanguage = Languages.English;
 
         private static int _defaultDigits = 3;
 
+        /// <summary>
+        /// default tostring language is english
+        /// set this property to change default language
+        /// </summary>
         public static Languages DefaultLanguage
         {
             get
@@ -22,6 +29,10 @@ namespace UnitConv
             }
         }
 
+        /// <summary>
+        /// default round decimal digits is 3
+        /// set this property to change default digits
+        /// </summary>
         public static int DefaultDigits
         {
             get

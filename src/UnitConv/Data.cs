@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// quantity type of data
+    /// </summary>
     public class Data : Quantity<DataUnit, Data>
     {
         public Data(string quantity) : base(quantity)

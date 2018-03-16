@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// quantity type of volume
+    /// </summary>
     public class Volume : Quantity<VolumeUnit, Volume>
     {
         public Volume(string quantity) : base(quantity)

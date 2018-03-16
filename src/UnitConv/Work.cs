@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// quantity type of work
+    /// </summary>
     public class Work : Quantity<WorkUnit, Work>
     {
         public Work(string quantity) : base(quantity)

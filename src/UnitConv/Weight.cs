@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UnitConv
 {
+    /// <summary>
+    /// quantity type of weight
+    /// </summary>
     public class Weight : Quantity<WeightUnit, Weight>
     {
         public Weight(string quantity) : base(quantity)
