@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UnitConv;
+using UnitConv.Extension;
 
 namespace UnitConvTest
 {

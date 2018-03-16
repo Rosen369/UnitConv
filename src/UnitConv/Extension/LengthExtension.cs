@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UnitConv
+namespace UnitConv.Extension
 {
     public static class LengthExtension
     {

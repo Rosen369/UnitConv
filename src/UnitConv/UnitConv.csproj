@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Rosen369</Authors>
+    <Company>Rosen369</Company>
+    <Product>Rosen369</Product>
+    <Description>An easy use unit convision building in net standard.</Description>
+    <Copyright>Copyright (c) 2017 Rosen</Copyright>
+    <PackageProjectUrl>https://github.com/Rosen369/UnitConv</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/Rosen369/UnitConv/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
 </Project>
