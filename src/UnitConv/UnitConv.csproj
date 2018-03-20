@@ -9,6 +9,9 @@
     <Copyright>Copyright (c) 2017 Rosen</Copyright>
     <PackageProjectUrl>https://github.com/Rosen369/UnitConv</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/Rosen369/UnitConv/blob/master/LICENSE</PackageLicenseUrl>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>UnitConv.snk</AssemblyOriginatorKeyFile>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>

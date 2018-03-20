@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 using UnitConv.Units;
+using UnitConv.Container;
 
 namespace UnitConv
 {
@@ -29,10 +30,9 @@ namespace UnitConv
         /// <returns></returns>
         public static T ConvertUnit<T>(string unit) where T : Unit
         {
-            var dic = UnitContainer.UnitDic;
-            if (!dic.ContainsKey(unit)) throw new Exception("Invalid unit type!");
-            var result = dic[unit];
-            return result as T;
+            var concrete = UnitContainer.TryGetUnit<T>(unit);
+            if (concrete == null) throw new Exception("Invalid unit type!");
+            return concrete;
         }
 
         /// <summary>

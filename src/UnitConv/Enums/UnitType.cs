@@ -4,6 +4,7 @@ using System.Text;
 
 namespace UnitConv
 {
+    [Obsolete]
     public enum UnitType
     {
         Length,
