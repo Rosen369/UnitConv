@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using UnitConv.Units;
+using UnitConv.Utils;
 
 namespace UnitConv.Converter
 {
