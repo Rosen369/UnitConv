@@ -46,7 +46,7 @@ namespace UnitConv
         {
             get
             {
-                return Units.AreaUnits.SquareDeciMeter.GetInstance();
+                return Units.AreaUnits.SquareDecimeter.GetInstance();
             }
         }
 

@@ -4,16 +4,16 @@ using System.Text;
 
 namespace UnitConv.Units.AreaUnits
 {
-    class SquareDeciMeter : AreaUnit
+    class SquareDecimeter : AreaUnit
     {
-        private SquareDeciMeter()
+        private SquareDecimeter()
         {
 
         }
 
-        private static readonly SquareDeciMeter _instance = new SquareDeciMeter();
+        private static readonly SquareDecimeter _instance = new SquareDecimeter();
 
-        public static SquareDeciMeter GetInstance()
+        public static SquareDecimeter GetInstance()
         {
             return _instance;
         }
