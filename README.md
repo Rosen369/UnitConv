@@ -1,7 +1,7 @@
 # UnitConv
-*UnitConv is a simple and easy to use unit conversion library.
-*[![license](https://img.shields.io/github/license/rosen369/unitconv.svg)](https://github.com/Rosen369/UnitConv/blob/master/LICENSE)
-*[![NuGet](https://img.shields.io/nuget/dt/unitconv.svg)](https://www.nuget.org/packages?q=UnitConv)
+ UnitConv is a simple and easy to use unit conversion library.
+  [![license](https://img.shields.io/github/license/rosen369/unitconv.svg)](https://github.com/Rosen369/UnitConv/blob/master/LICENSE)
+  [![NuGet](https://img.shields.io/nuget/dt/unitconv.svg)](https://www.nuget.org/packages?q=UnitConv)
 
 # Feeds
 * NuGet [![NuGet](https://img.shields.io/nuget/v/UnitConv.svg)](https://www.nuget.org/packages?q=UnitConv)
