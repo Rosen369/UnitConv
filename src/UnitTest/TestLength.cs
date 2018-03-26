@@ -26,5 +26,19 @@ namespace UnitConvTest
             Assert.AreEqual(kilo.ToString(), "100.142km");
             Assert.AreEqual(kilo.ToString(Languages.Chinese), "100.142千米");
         }
+
+        [TestMethod]
+        public void TestMeterConstructor()
+        {
+            var meter1 = new Length(1184, LengthUnit.Meter);
+            var meter2 = new Length("1184m");
+            var meter3 = new Length("1184", "m");
+            var meter4 = new Length(1184, "m");
+            var meter5 = new Length("1184", LengthUnit.Meter);
+            Assert.AreEqual(meter1.Equals(meter2), true);
+            Assert.AreEqual(meter1.Equals(meter3), true);
+            Assert.AreEqual(meter1.Equals(meter4), true);
+            Assert.AreEqual(meter1.Equals(meter5), true);
+        }
     }
 }
