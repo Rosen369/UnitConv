@@ -7,7 +7,7 @@ UnitConv is a simple and easy to use unit conversion library.
 # Let's get started
 
 From **NuGet**: 
-* `Install-Package UnitConv
+* PM> Install-Package UnitConv
 
 # Create a quantity
 
