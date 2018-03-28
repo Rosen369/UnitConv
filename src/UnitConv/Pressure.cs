@@ -32,9 +32,7 @@ namespace UnitConv
         protected internal override Pressure ConvertValue(PressureUnit toUnit)
         {
             if (toUnit == this.Unit) new Pressure(this.Value, toUnit);
-            var basicRate = this.Unit.GetRate();
-            var rate = toUnit.GetRate();
-            var targetValue = this.Value * basicRate / rate;
+            var targetValue = this.CalculateConversion(this.Unit, toUnit);
             return new Pressure(targetValue, toUnit);
         }
     }

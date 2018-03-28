@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using UnitConv.Units;
 
@@ -23,7 +24,7 @@ namespace UnitConv.Utils
 
         private static void AddUnitType<T>() where T : Unit
         {
-            var units = typeof(T).GetProperties().Select(e => e.GetValue(null) as T).ToList();
+            var units = typeof(T).GetProperties(BindingFlags.Static | BindingFlags.Public).Select(e => e.GetValue(null) as T).ToList();
             var languages = (Languages[])Enum.GetValues(typeof(Languages));
             var dic = new Dictionary<string, Unit>();
             foreach (var language in languages)

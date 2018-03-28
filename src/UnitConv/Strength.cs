@@ -32,9 +32,7 @@ namespace UnitConv
         protected internal override Strength ConvertValue(StrengthUnit toUnit)
         {
             if (toUnit == this.Unit) new Strength(this.Value, toUnit);
-            var basicRate = this.Unit.GetRate();
-            var rate = toUnit.GetRate();
-            var targetValue = this.Value * basicRate / rate;
+            var targetValue = this.CalculateConversion(this.Unit, toUnit);
             return new Strength(targetValue, toUnit);
         }
     }

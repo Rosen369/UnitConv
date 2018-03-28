@@ -6,7 +6,9 @@ namespace UnitConv.Units
 {
     public interface IUnit
     {
-        decimal GetRate();
+        decimal Rate { get; }
+
+        decimal Subtrahend { get; }
 
         string GetDisplay(Languages language);
     }

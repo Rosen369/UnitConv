@@ -50,6 +50,16 @@ namespace UnitConv
 
         protected internal abstract TChild ConvertValue(TUnit toUnit);
 
+        protected internal decimal CalculateConversion(TUnit from, TUnit to)
+        {
+            var fromRate = from.Rate;
+            var toRate = to.Rate;
+            var fromSub = from.Subtrahend;
+            var toSub = to.Subtrahend;
+            var targetValue = (this.Value + fromSub) * fromRate / toRate - toSub;
+            return targetValue;
+        }
+
         public TChild ConvertTo(TUnit toUnit)
         {
             return this.ConvertValue(toUnit);
