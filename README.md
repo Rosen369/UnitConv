@@ -28,7 +28,12 @@ var meter5 = new Length("1184", LengthUnit.Meter);
 
 ```c#
 var kilo = new Length(1.184m, LengthUnit.Kilometer);
-var meter = UnitConverter.Length.Convert(kilo, LengthUnit.Meter);
+var meter1 = UnitConverter.Length.Convert(kilo, LengthUnit.Meter);
+var meter2 = UnitConverter.Length.Convert(kilo, "m");
+var meter3 = UnitConverter.Length.Convert("1.184km", LengthUnit.Meter);
+var meter4 = UnitConverter.Length.Convert("1.184km", "m");
+var meter5 = UnitConverter.Length.Convert(1.184m, "km", "m");
+var meter6 = UnitConverter.Length.Convert(1.184m, LengthUnit.Kilometer, LengthUnit.Meter);
 ```
 
 # Extension
@@ -41,12 +46,24 @@ var meter = kilo.ToMeter();
 var mile = kilo.ToMile();
 ```
 
+# Operator
+```c#
+var kilo = new Length(1.184m, LengthUnit.Kilometer);
+var meter = new Length(1184, LengthUnit.Meter);
+var r1 = kilo == meter;  //true
+var r2 = kilo != meter;  //false
+var r3 = kilo <= meter;  //true
+var r4 = kilo >= meter;  //true
+var r5 = kilo < meter;  //false
+var r6 = kilo > meter;  //false
+```
+
 # Get display
 
 ```c#
 var kilo = new Length(1.184m, LengthUnit.Kilometer);
 var en = kilo.ToString();	//100.142km
-var ch = kilo.ToString(Languages.Chinese); //"100.142千米"
+var ch = kilo.ToString(Languages.Chinese);	//"100.142千米"
 ```
 
 # Default string settings

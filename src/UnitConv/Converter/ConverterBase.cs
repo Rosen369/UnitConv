@@ -43,5 +43,11 @@ namespace UnitConv.Converter
         {
             return quantity.ConvertValue(toUnit);
         }
+
+        public TQuantity Convert(TQuantity quantity, string toUnit)
+        {
+            var unit = Util.ConvertUnit<TUnit>(toUnit);
+            return quantity.ConvertValue(unit);
+        }
     }
 }

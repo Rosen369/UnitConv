@@ -104,5 +104,47 @@ namespace UnitConv
             var hashCode = str.GetHashCode();
             return hashCode;
         }
+
+        public static bool operator ==(Quantity<TUnit, TChild> lq, Quantity<TUnit, TChild> rq)
+        {
+            return lq.Equals(rq);
+        }
+
+        public static bool operator !=(Quantity<TUnit, TChild> lq, Quantity<TUnit, TChild> rq)
+        {
+            return !lq.Equals(rq);
+        }
+
+        public static bool operator >=(Quantity<TUnit, TChild> lq, Quantity<TUnit, TChild> rq)
+        {
+            if (!(lq is TChild)) return false;
+            if (!(rq is TChild)) return false;
+            var rqValue = rq.ConvertValue(lq.Unit).Value;
+            return lq.Value >= rqValue;
+        }
+
+        public static bool operator <=(Quantity<TUnit, TChild> lq, Quantity<TUnit, TChild> rq)
+        {
+            if (!(lq is TChild)) return false;
+            if (!(rq is TChild)) return false;
+            var rqValue = rq.ConvertValue(lq.Unit).Value;
+            return lq.Value <= rqValue;
+        }
+
+        public static bool operator >(Quantity<TUnit, TChild> lq, Quantity<TUnit, TChild> rq)
+        {
+            if (!(lq is TChild)) return false;
+            if (!(rq is TChild)) return false;
+            var rqValue = rq.ConvertValue(lq.Unit).Value;
+            return lq.Value > rqValue;
+        }
+
+        public static bool operator <(Quantity<TUnit, TChild> lq, Quantity<TUnit, TChild> rq)
+        {
+            if (!(lq is TChild)) return false;
+            if (!(rq is TChild)) return false;
+            var rqValue = rq.ConvertValue(lq.Unit).Value;
+            return lq.Value < rqValue;
+        }
     }
 }
