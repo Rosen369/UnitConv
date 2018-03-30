@@ -6,17 +6,18 @@
     <Company>Rosen369</Company>
     <Product>Rosen369</Product>
     <Description>UnitConv is a simple and easy to use unit conversion library.</Description>
-    <Copyright>Copyright (c) 2017 Rosen</Copyright>
+    <Copyright>Copyright (c) 2017-2018 Rosen</Copyright>
     <PackageProjectUrl>https://github.com/Rosen369/UnitConv</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/Rosen369/UnitConv/blob/master/LICENSE</PackageLicenseUrl>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>UnitConv.snk</AssemblyOriginatorKeyFile>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>0.1.1</Version>
-    <AssemblyVersion>0.0.1.1</AssemblyVersion>
-    <FileVersion>0.0.1.1</FileVersion>
+    <Version>0.1.2</Version>
+    <AssemblyVersion>0.0.1.2</AssemblyVersion>
+    <FileVersion>0.0.1.2</FileVersion>
     <PackageTags>Quantity,Quantities,UnitConvert,Unit,Units,Physical,Measurement,Measurements,Conversion</PackageTags>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
