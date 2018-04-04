@@ -6,16 +6,19 @@ namespace UnitConv.Units.WorkUnits
 {
     public class KilogramMeter : WorkUnit
     {
+        private class Nested
+        {
+            internal static readonly KilogramMeter Instance = new KilogramMeter();
+        }
+
         private KilogramMeter()
         {
 
         }
 
-        private static readonly KilogramMeter _instance = new KilogramMeter();
-
         public static KilogramMeter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

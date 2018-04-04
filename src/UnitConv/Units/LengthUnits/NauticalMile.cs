@@ -6,16 +6,19 @@ namespace UnitConv.Units.LengthUnits
 {
     public class NauticalMile : LengthUnit
     {
+        private class Nested
+        {
+            internal static readonly NauticalMile Instance = new NauticalMile();
+        }
+
         private NauticalMile()
         {
 
         }
 
-        private static readonly NauticalMile _instance = new NauticalMile();
-
         public static NauticalMile GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

@@ -6,16 +6,19 @@ namespace UnitConv.Units.DataUnits
 {
     class Bit : DataUnit
     {
+        private class Nested
+        {
+            internal static readonly Bit Instance = new Bit();
+        }
+
         private Bit()
         {
 
         }
 
-        private static readonly Bit _instance = new Bit();
-
         public static Bit GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

@@ -6,16 +6,19 @@ namespace UnitConv.Units.PowerUnits
 {
     public class BritishThermalUnitPerSecond : PowerUnit
     {
+        private class Nested
+        {
+            internal static readonly BritishThermalUnitPerSecond Instance = new BritishThermalUnitPerSecond();
+        }
+
         private BritishThermalUnitPerSecond()
         {
 
         }
 
-        private static readonly BritishThermalUnitPerSecond _instance = new BritishThermalUnitPerSecond();
-
         public static BritishThermalUnitPerSecond GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

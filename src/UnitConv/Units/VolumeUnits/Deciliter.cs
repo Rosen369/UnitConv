@@ -6,16 +6,19 @@ namespace UnitConv.Units.VolumeUnits
 {
     public class Deciliter : VolumeUnit
     {
+        private class Nested
+        {
+            internal static readonly Deciliter Instance = new Deciliter();
+        }
+
         private Deciliter()
         {
 
         }
 
-        private static Deciliter _instance = new Deciliter();
-
         public static Deciliter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

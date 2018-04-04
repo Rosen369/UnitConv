@@ -6,16 +6,19 @@ namespace UnitConv.Units.VolumeUnits
 {
     public class HektoLitre : VolumeUnit
     {
+        private class Nested
+        {
+            internal static readonly HektoLitre Instance = new HektoLitre();
+        }
+
         private HektoLitre()
         {
 
         }
 
-        private static readonly HektoLitre _instance = new HektoLitre();
-
         public static HektoLitre GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

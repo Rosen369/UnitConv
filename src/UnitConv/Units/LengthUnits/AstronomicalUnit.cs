@@ -6,16 +6,19 @@ namespace UnitConv.Units.LengthUnits
 {
     public class AstronomicalUnit : LengthUnit
     {
+        private class Nested
+        {
+            internal static readonly AstronomicalUnit Instance = new AstronomicalUnit();
+        }
+
         private AstronomicalUnit()
         {
 
         }
 
-        private static readonly AstronomicalUnit _instance = new AstronomicalUnit();
-
         public static AstronomicalUnit GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

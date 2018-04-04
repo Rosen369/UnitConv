@@ -6,16 +6,19 @@ namespace UnitConv.Units.LengthUnits
 {
     public class Decimeter : LengthUnit
     {
+        private class Nested
+        {
+            internal static readonly Decimeter Instance = new Decimeter();
+        }
+
         private Decimeter()
         {
 
         }
 
-        private static readonly Decimeter _instance = new Decimeter();
-
         public static Decimeter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

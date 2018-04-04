@@ -6,16 +6,19 @@ namespace UnitConv.Units.DataUnits
 {
     class Megabyte : DataUnit
     {
+        private class Nested
+        {
+            internal static readonly Megabyte Instance = new Megabyte();
+        }
+
         private Megabyte()
         {
 
         }
 
-        private static readonly Megabyte _instance = new Megabyte();
-
         public static Megabyte GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

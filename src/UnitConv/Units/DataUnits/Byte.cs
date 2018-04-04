@@ -6,16 +6,19 @@ namespace UnitConv.Units.DataUnits
 {
     class Byte : DataUnit
     {
+        private class Nested
+        {
+            internal static readonly Byte Instance = new Byte();
+        }
+
         private Byte()
         {
 
         }
 
-        private static readonly Byte _instance = new Byte();
-
         public static Byte GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

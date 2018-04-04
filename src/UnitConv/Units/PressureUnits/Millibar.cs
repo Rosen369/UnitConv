@@ -6,16 +6,19 @@ namespace UnitConv.Units.PressureUnits
 {
     public class Millibar : PressureUnit
     {
+        private class Nested
+        {
+            internal static readonly Millibar Instance = new Millibar();
+        }
+
         private Millibar()
         {
 
         }
 
-        private static readonly Millibar _instance = new Millibar();
-
         public static Millibar GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

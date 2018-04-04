@@ -6,16 +6,19 @@ namespace UnitConv.Units.PressureUnits
 {
     public class Bar : PressureUnit
     {
+        private class Nested
+        {
+            internal static readonly Bar Instance = new Bar();
+        }
+
         private Bar()
         {
 
         }
 
-        private static readonly Bar _instance = new Bar();
-
         public static Bar GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

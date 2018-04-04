@@ -6,16 +6,19 @@ namespace UnitConv.Units.StrengthUnits
 {
     public class Newton : StrengthUnit
     {
+        private class Nested
+        {
+            internal static readonly Newton Instance = new Newton();
+        }
+
         private Newton()
         {
 
         }
 
-        private static readonly Newton _instance = new Newton();
-
         public static Newton GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

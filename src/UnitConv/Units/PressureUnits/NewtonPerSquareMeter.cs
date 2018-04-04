@@ -6,16 +6,19 @@ namespace UnitConv.Units.PressureUnits
 {
     public class NewtonPerSquareMeter : PressureUnit
     {
+        private class Nested
+        {
+            internal static readonly NewtonPerSquareMeter Instance = new NewtonPerSquareMeter();
+        }
+
         private NewtonPerSquareMeter()
         {
 
         }
 
-        private static readonly NewtonPerSquareMeter _instance = new NewtonPerSquareMeter();
-
         public static NewtonPerSquareMeter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

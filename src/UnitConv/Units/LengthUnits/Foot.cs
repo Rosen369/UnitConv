@@ -6,16 +6,19 @@ namespace UnitConv.Units.LengthUnits
 {
     public class Foot : LengthUnit
     {
+        private class Nested
+        {
+            internal static readonly Foot Instance = new Foot();
+        }
+
         private Foot()
         {
 
         }
 
-        private static readonly Foot _instance = new Foot();
-
         public static Foot GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

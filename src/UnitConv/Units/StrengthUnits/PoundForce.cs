@@ -6,16 +6,19 @@ namespace UnitConv.Units.StrengthUnits
 {
     public class PoundForce : StrengthUnit
     {
+        private class Nested
+        {
+            internal static readonly PoundForce Instance = new PoundForce();
+        }
+
         private PoundForce()
         {
 
         }
 
-        private static readonly PoundForce _instance = new PoundForce();
-
         public static PoundForce GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

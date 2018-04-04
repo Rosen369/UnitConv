@@ -6,16 +6,19 @@ namespace UnitConv.Units.LengthUnits
 {
     public class Picometer : LengthUnit
     {
+        private class Nested
+        {
+            internal static readonly Picometer Instance = new Picometer();
+        }
+
         private Picometer()
         {
 
         }
 
-        private static readonly Picometer _instance = new Picometer();
-
         public static Picometer GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

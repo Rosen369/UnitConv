@@ -6,16 +6,19 @@ namespace UnitConv.Units.VolumeUnits
 {
     public class CubicYard : VolumeUnit
     {
+        private class Nested
+        {
+            internal static readonly CubicYard Instance = new CubicYard();
+        }
+
         private CubicYard()
         {
 
         }
 
-        private static readonly CubicYard _instance = new CubicYard();
-
         public static CubicYard GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

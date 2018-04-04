@@ -6,16 +6,19 @@ namespace UnitConv.Units.WorkUnits
 {
     public class FootPound : WorkUnit
     {
+        private class Nested
+        {
+            internal static readonly FootPound Instance = new FootPound();
+        }
+
         private FootPound()
         {
 
         }
 
-        private static readonly FootPound _instance = new FootPound();
-
         public static FootPound GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

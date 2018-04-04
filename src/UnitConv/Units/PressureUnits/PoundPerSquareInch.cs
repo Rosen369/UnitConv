@@ -6,16 +6,19 @@ namespace UnitConv.Units.PressureUnits
 {
     public class PoundPerSquareInch : PressureUnit
     {
+        private class Nested
+        {
+            internal static readonly PoundPerSquareInch Instance = new PoundPerSquareInch();
+        }
+
         private PoundPerSquareInch()
         {
 
         }
 
-        private static readonly PoundPerSquareInch _instance = new PoundPerSquareInch();
-
         public static PoundPerSquareInch GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

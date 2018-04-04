@@ -6,16 +6,19 @@ namespace UnitConv.Units.WorkUnits
 {
     public class Joule : WorkUnit
     {
+        private class Nested
+        {
+            internal static readonly Joule Instance = new Joule();
+        }
+
         private Joule()
         {
 
         }
 
-        private static readonly Joule _instance = new Joule();
-
         public static Joule GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

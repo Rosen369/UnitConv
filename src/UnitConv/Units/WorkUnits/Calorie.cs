@@ -6,16 +6,19 @@ namespace UnitConv.Units.WorkUnits
 {
     public class Calorie : WorkUnit
     {
+        private class Nested
+        {
+            internal static readonly Calorie Instance = new Calorie();
+        }
+
         private Calorie()
         {
 
         }
 
-        private static readonly Calorie _instance = new Calorie();
-
         public static Calorie GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

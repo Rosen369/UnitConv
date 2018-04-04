@@ -6,16 +6,19 @@ namespace UnitConv.Units.VolumeUnits
 {
     public class USGallon : VolumeUnit
     {
+        private class Nested
+        {
+            internal static readonly USGallon Instance = new USGallon();
+        }
+
         private USGallon()
         {
 
         }
 
-        private static readonly USGallon _instance = new USGallon();
-
         public static USGallon GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

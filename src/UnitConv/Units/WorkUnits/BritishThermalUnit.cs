@@ -6,16 +6,19 @@ namespace UnitConv.Units.WorkUnits
 {
     public class BritishThermalUnit : WorkUnit
     {
+        private class Nested
+        {
+            internal static readonly BritishThermalUnit Instance = new BritishThermalUnit();
+        }
+
         private BritishThermalUnit()
         {
 
         }
 
-        private static readonly BritishThermalUnit _instance = new BritishThermalUnit();
-
         public static BritishThermalUnit GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

@@ -6,16 +6,19 @@ namespace UnitConv.Units.PowerUnits
 {
     public class KilogramMeterPerSecond : PowerUnit
     {
+        private class Nested
+        {
+            internal static readonly KilogramMeterPerSecond Instance = new KilogramMeterPerSecond();
+        }
+
         private KilogramMeterPerSecond()
         {
 
         }
 
-        private static readonly KilogramMeterPerSecond _instance = new KilogramMeterPerSecond();
-
         public static KilogramMeterPerSecond GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

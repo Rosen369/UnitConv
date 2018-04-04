@@ -6,16 +6,19 @@ namespace UnitConv.Units.WorkUnits
 {
     public class MetricHorsepowerHour : WorkUnit
     {
+        private class Nested
+        {
+            internal static readonly MetricHorsepowerHour Instance = new MetricHorsepowerHour();
+        }
+
         private MetricHorsepowerHour()
         {
 
         }
 
-        private static readonly MetricHorsepowerHour _instance = new MetricHorsepowerHour();
-
         public static MetricHorsepowerHour GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

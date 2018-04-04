@@ -6,16 +6,19 @@ namespace UnitConv.Units.PowerUnits
 {
     public class Kilowatt : PowerUnit
     {
+        private class Nested
+        {
+            internal static readonly Kilowatt Instance = new Kilowatt();
+        }
+
         private Kilowatt()
         {
 
         }
 
-        private static readonly Kilowatt _instance = new Kilowatt();
-
         public static Kilowatt GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

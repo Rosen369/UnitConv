@@ -6,16 +6,19 @@ namespace UnitConv.Units.PowerUnits
 {
     public class MetricHorsepower : PowerUnit
     {
+        private class Nested
+        {
+            internal static readonly MetricHorsepower Instance = new MetricHorsepower();
+        }
+
         private MetricHorsepower()
         {
 
         }
 
-        private static readonly MetricHorsepower _instance = new MetricHorsepower();
-
         public static MetricHorsepower GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

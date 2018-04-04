@@ -6,16 +6,19 @@ namespace UnitConv.Units.PressureUnits
 {
     public class Megapascal : PressureUnit
     {
+        private class Nested
+        {
+            internal static readonly Megapascal Instance = new Megapascal();
+        }
+
         private Megapascal()
         {
 
         }
 
-        private static readonly Megapascal _instance = new Megapascal();
-
         public static Megapascal GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

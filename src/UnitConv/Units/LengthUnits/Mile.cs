@@ -6,16 +6,19 @@ namespace UnitConv.Units.LengthUnits
 {
     public class Mile : LengthUnit
     {
+        private class Nested
+        {
+            internal static readonly Mile Instance = new Mile();
+        }
+
         private Mile()
         {
 
         }
 
-        private static readonly Mile _instance = new Mile();
-
         public static Mile GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

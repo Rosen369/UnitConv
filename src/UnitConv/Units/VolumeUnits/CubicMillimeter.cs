@@ -6,16 +6,19 @@ namespace UnitConv.Units.VolumeUnits
 {
     public class CubicMillimeter : VolumeUnit
     {
+        private class Nested
+        {
+            internal static readonly CubicMillimeter Instance = new CubicMillimeter();
+        }
+
         private CubicMillimeter()
         {
 
         }
 
-        private static readonly CubicMillimeter _instance = new CubicMillimeter();
-
         public static CubicMillimeter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

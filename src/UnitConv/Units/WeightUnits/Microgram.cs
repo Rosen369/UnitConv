@@ -6,16 +6,19 @@ namespace UnitConv.Units.WeightUnits
 {
     public class Microgram : WeightUnit
     {
+        private class Nested
+        {
+            internal static readonly Microgram Instance = new Microgram();
+        }
+
         private Microgram()
         {
 
         }
 
-        private static readonly Microgram _instance = new Microgram();
-
         public static Microgram GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

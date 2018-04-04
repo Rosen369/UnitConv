@@ -6,16 +6,19 @@ namespace UnitConv.Units.VolumeUnits
 {
     public class Microliter : VolumeUnit
     {
+        private class Nested
+        {
+            internal static readonly Microliter Instance = new Microliter();
+        }
+
         private Microliter()
         {
 
         }
 
-        private static readonly Microliter _instance = new Microliter();
-
         public static Microliter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

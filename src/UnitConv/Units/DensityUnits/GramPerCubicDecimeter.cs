@@ -6,16 +6,19 @@ namespace UnitConv.Units.DensityUnits
 {
     class GramPerCubicDecimeter : DensityUnit
     {
+        private class Nested
+        {
+            internal static readonly GramPerCubicDecimeter Instance = new GramPerCubicDecimeter();
+        }
+
         private GramPerCubicDecimeter()
         {
 
         }
 
-        private static readonly GramPerCubicDecimeter _instance = new GramPerCubicDecimeter();
-
         public static GramPerCubicDecimeter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

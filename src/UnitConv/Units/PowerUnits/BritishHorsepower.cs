@@ -6,16 +6,19 @@ namespace UnitConv.Units.PowerUnits
 {
     public class BritishHorsepower : PowerUnit
     {
+        private class Nested
+        {
+            internal static readonly BritishHorsepower Instance = new BritishHorsepower();
+        }
+
         private BritishHorsepower()
         {
 
         }
 
-        private static readonly BritishHorsepower _instance = new BritishHorsepower();
-
         public static BritishHorsepower GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

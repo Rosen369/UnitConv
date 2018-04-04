@@ -6,16 +6,19 @@ namespace UnitConv.Units.LengthUnits
 {
     public class LightYear : LengthUnit
     {
+        private class Nested
+        {
+            internal static readonly LightYear Instance = new LightYear();
+        }
+
         private LightYear()
         {
 
         }
 
-        private static readonly LightYear _instance = new LightYear();
-
         public static LightYear GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

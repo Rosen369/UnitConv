@@ -6,16 +6,19 @@ namespace UnitConv.Units.WeightUnits
 {
     public class Ounce : WeightUnit
     {
+        private class Nested
+        {
+            internal static readonly Ounce Instance = new Ounce();
+        }
+
         private Ounce()
         {
 
         }
 
-        private static readonly Ounce _instance = new Ounce();
-
         public static Ounce GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

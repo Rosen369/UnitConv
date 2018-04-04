@@ -6,16 +6,19 @@ namespace UnitConv.Units.WorkUnits
 {
     public class KilowattHour : WorkUnit
     {
+        private class Nested
+        {
+            internal static readonly KilowattHour Instance = new KilowattHour();
+        }
+
         private KilowattHour()
         {
 
         }
 
-        private static readonly KilowattHour _instance = new KilowattHour();
-
         public static KilowattHour GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

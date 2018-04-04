@@ -6,16 +6,19 @@ namespace UnitConv.Units.PowerUnits
 {
     public class KcalPerSecond : PowerUnit
     {
+        private class Nested
+        {
+            internal static readonly KcalPerSecond Instance = new KcalPerSecond();
+        }
+
         private KcalPerSecond()
         {
 
         }
 
-        private static readonly KcalPerSecond _instance = new KcalPerSecond();
-
         public static KcalPerSecond GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

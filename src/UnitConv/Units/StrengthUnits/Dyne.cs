@@ -6,16 +6,19 @@ namespace UnitConv.Units.StrengthUnits
 {
     public class Dyne : StrengthUnit
     {
+        private class Nested
+        {
+            internal static readonly Dyne Instance = new Dyne();
+        }
+
         private Dyne()
         {
 
         }
 
-        private static readonly Dyne _instance = new Dyne();
-
         public static Dyne GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

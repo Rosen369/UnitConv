@@ -6,16 +6,19 @@ namespace UnitConv.Units.VolumeUnits
 {
     public class CubicFoot : VolumeUnit
     {
+        private class Nested
+        {
+            internal static readonly CubicFoot Instance = new CubicFoot();
+        }
+
         private CubicFoot()
         {
 
         }
 
-        private static readonly CubicFoot _instance = new CubicFoot();
-
         public static CubicFoot GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

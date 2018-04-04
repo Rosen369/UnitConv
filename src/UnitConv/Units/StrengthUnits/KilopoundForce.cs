@@ -6,16 +6,19 @@ namespace UnitConv.Units.StrengthUnits
 {
     public class KilopoundForce : StrengthUnit
     {
+        private class Nested
+        {
+            internal static readonly KilopoundForce Instance = new KilopoundForce();
+        }
+
         private KilopoundForce()
         {
 
         }
 
-        private static readonly KilopoundForce _instance = new KilopoundForce();
-
         public static KilopoundForce GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

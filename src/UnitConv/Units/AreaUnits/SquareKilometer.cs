@@ -6,16 +6,19 @@ namespace UnitConv.Units.AreaUnits
 {
     class SquareKilometer : AreaUnit
     {
+        private class Nested
+        {
+            internal static readonly SquareKilometer Instance = new SquareKilometer();
+        }
+
         private SquareKilometer()
         {
 
         }
 
-        private static readonly SquareKilometer _instance = new SquareKilometer();
-
         public static SquareKilometer GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

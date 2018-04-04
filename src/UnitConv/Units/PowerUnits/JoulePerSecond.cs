@@ -6,16 +6,19 @@ namespace UnitConv.Units.PowerUnits
 {
     public class JoulePerSecond : PowerUnit
     {
+        private class Nested
+        {
+            internal static readonly JoulePerSecond Instance = new JoulePerSecond();
+        }
+
         private JoulePerSecond()
         {
 
         }
 
-        private static readonly JoulePerSecond _instance = new JoulePerSecond();
-
         public static JoulePerSecond GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

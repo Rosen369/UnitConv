@@ -6,16 +6,19 @@ namespace UnitConv.Units.PressureUnits
 {
     public class Pascal : PressureUnit
     {
+        private class Nested
+        {
+            internal static readonly Pascal Instance = new Pascal();
+        }
+
         private Pascal()
         {
 
         }
 
-        private static readonly Pascal _instance = new Pascal();
-
         public static Pascal GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

@@ -6,16 +6,19 @@ namespace UnitConv.Units.WeightUnits
 {
     public class Gram : WeightUnit
     {
+        private class Nested
+        {
+            internal static readonly Gram Instance = new Gram();
+        }
+
         private Gram()
         {
 
         }
 
-        private static readonly Gram _instance = new Gram();
-
         public static Gram GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

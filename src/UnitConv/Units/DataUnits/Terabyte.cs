@@ -6,16 +6,19 @@ namespace UnitConv.Units.DataUnits
 {
     class Terabyte : DataUnit
     {
+        private class Nested
+        {
+            internal static readonly Terabyte Instance = new Terabyte();
+        }
+
         private Terabyte()
         {
 
         }
 
-        private static readonly Terabyte _instance = new Terabyte();
-
         public static Terabyte GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

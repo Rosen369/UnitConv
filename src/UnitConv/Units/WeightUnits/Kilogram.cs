@@ -6,16 +6,19 @@ namespace UnitConv.Units.WeightUnits
 {
     public class Kilogram : WeightUnit
     {
+        private class Nested
+        {
+            internal static readonly Kilogram Instance = new Kilogram();
+        }
+
         private Kilogram()
         {
 
         }
 
-        private static readonly Kilogram _instance = new Kilogram();
-
         public static Kilogram GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

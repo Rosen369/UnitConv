@@ -6,16 +6,19 @@ namespace UnitConv.Units.SpeedUnits
 {
     public class KilometerPerSecond : SpeedUnit
     {
+        private class Nested
+        {
+            internal static readonly KilometerPerSecond Instance = new KilometerPerSecond();
+        }
+
         private KilometerPerSecond()
         {
 
         }
 
-        private static readonly KilometerPerSecond _instance = new KilometerPerSecond();
-
         public static KilometerPerSecond GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

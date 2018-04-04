@@ -6,16 +6,19 @@ namespace UnitConv.Units.StrengthUnits
 {
     public class TonneForce : StrengthUnit
     {
+        private class Nested
+        {
+            internal static readonly TonneForce Instance = new TonneForce();
+        }
+
         private TonneForce()
         {
 
         }
 
-        private static readonly TonneForce _instance = new TonneForce();
-
         public static TonneForce GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

@@ -6,16 +6,19 @@ namespace UnitConv.Units.PressureUnits
 {
     public class Kilopascal : PressureUnit
     {
+        private class Nested
+        {
+            internal static readonly Kilopascal Instance = new Kilopascal();
+        }
+
         private Kilopascal()
         {
 
         }
 
-        private static readonly Kilopascal _instance = new Kilopascal();
-
         public static Kilopascal GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

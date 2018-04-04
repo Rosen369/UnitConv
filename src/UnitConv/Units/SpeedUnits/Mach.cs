@@ -6,16 +6,19 @@ namespace UnitConv.Units.SpeedUnits
 {
     public class Mach : SpeedUnit
     {
+        private class Nested
+        {
+            internal static readonly Mach Instance = new Mach();
+        }
+
         private Mach()
         {
 
         }
 
-        private static readonly Mach _instance = new Mach();
-
         public static Mach GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

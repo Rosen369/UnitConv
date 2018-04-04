@@ -6,16 +6,19 @@ namespace UnitConv.Units.DensityUnits
 {
     class KilogramPerCubicCentimeter : DensityUnit
     {
+        private class Nested
+        {
+            internal static readonly KilogramPerCubicCentimeter Instance = new KilogramPerCubicCentimeter();
+        }
+
         private KilogramPerCubicCentimeter()
         {
 
         }
 
-        private static readonly KilogramPerCubicCentimeter _instance = new KilogramPerCubicCentimeter();
-
         public static KilogramPerCubicCentimeter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

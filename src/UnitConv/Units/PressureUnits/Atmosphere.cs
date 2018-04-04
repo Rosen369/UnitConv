@@ -6,16 +6,19 @@ namespace UnitConv.Units.PressureUnits
 {
     public class Atmosphere : PressureUnit
     {
+        private class Nested
+        {
+            internal static readonly Atmosphere Instance = new Atmosphere();
+        }
+
         private Atmosphere()
         {
 
         }
 
-        private static readonly Atmosphere _instance = new Atmosphere();
-
         public static Atmosphere GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

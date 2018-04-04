@@ -6,16 +6,19 @@ namespace UnitConv.Units.AreaUnits
 {
     class SquareYard : AreaUnit
     {
+        private class Nested
+        {
+            internal static readonly SquareYard Instance = new SquareYard();
+        }
+
         private SquareYard()
         {
 
         }
 
-        private static readonly SquareYard _instance = new SquareYard();
-
         public static SquareYard GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

@@ -6,16 +6,19 @@ namespace UnitConv.Units.AreaUnits
 {
     class Acre : AreaUnit
     {
+        private class Nested
+        {
+            internal static readonly Acre Instance = new Acre();
+        }
+
         private Acre()
         {
 
         }
 
-        private static readonly Acre _instance = new Acre();
-
         public static Acre GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

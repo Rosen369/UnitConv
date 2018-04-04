@@ -6,16 +6,19 @@ namespace UnitConv.Units.SpeedUnits
 {
     public class MilePerHour : SpeedUnit
     {
+        private class Nested
+        {
+            internal static readonly MilePerHour Instance = new MilePerHour();
+        }
+
         private MilePerHour()
         {
 
         }
 
-        private static readonly MilePerHour _instance = new MilePerHour();
-
         public static MilePerHour GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

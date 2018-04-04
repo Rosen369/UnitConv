@@ -6,16 +6,19 @@ namespace UnitConv.Units.PowerUnits
 {
     public class Watt : PowerUnit
     {
+        private class Nested
+        {
+            internal static readonly Watt Instance = new Watt();
+        }
+
         private Watt()
         {
 
         }
 
-        private static readonly Watt _instance = new Watt();
-
         public static Watt GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

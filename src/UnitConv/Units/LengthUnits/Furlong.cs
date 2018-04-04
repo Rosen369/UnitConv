@@ -6,16 +6,19 @@ namespace UnitConv.Units.LengthUnits
 {
     public class Furlong : LengthUnit
     {
+        private class Nested
+        {
+            internal static readonly Furlong Instance = new Furlong();
+        }
+
         private Furlong()
         {
 
         }
 
-        private static readonly Furlong _instance = new Furlong();
-
         public static Furlong GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

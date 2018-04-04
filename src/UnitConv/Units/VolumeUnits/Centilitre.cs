@@ -6,16 +6,19 @@ namespace UnitConv.Units.VolumeUnits
 {
     public class Centilitre : VolumeUnit
     {
+        private class Nested
+        {
+            internal static readonly Centilitre Instance = new Centilitre();
+        }
+
         private Centilitre()
         {
 
         }
 
-        private static readonly Centilitre _instance = new Centilitre();
-
         public static Centilitre GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

@@ -6,16 +6,19 @@ namespace UnitConv.Units.PressureUnits
 {
     public class InchOfMercury : PressureUnit
     {
+        private class Nested
+        {
+            internal static readonly InchOfMercury Instance = new InchOfMercury();
+        }
+
         private InchOfMercury()
         {
 
         }
 
-        private static readonly InchOfMercury _instance = new InchOfMercury();
-
         public static InchOfMercury GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

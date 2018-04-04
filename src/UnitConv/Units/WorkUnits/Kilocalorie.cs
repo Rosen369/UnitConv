@@ -6,16 +6,19 @@ namespace UnitConv.Units.WorkUnits
 {
     public class Kilocalorie : WorkUnit
     {
+        private class Nested
+        {
+            internal static readonly Kilocalorie Instance = new Kilocalorie();
+        }
+
         private Kilocalorie()
         {
 
         }
 
-        private static readonly Kilocalorie _instance = new Kilocalorie();
-
         public static Kilocalorie GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

@@ -6,16 +6,19 @@ namespace UnitConv.Units.DataUnits
 {
     class Kilobyte : DataUnit
     {
+        private class Nested
+        {
+            internal static readonly Kilobyte Instance = new Kilobyte();
+        }
+
         private Kilobyte()
         {
 
         }
 
-        private static readonly Kilobyte _instance = new Kilobyte();
-
         public static Kilobyte GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

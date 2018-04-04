@@ -6,16 +6,19 @@ namespace UnitConv.Units.WorkUnits
 {
     public class BritishHorsepowerHour : WorkUnit
     {
+        private class Nested
+        {
+            internal static readonly BritishHorsepowerHour Instance = new BritishHorsepowerHour();
+        }
+
         private BritishHorsepowerHour()
         {
 
         }
 
-        private static readonly BritishHorsepowerHour _instance = new BritishHorsepowerHour();
-
         public static BritishHorsepowerHour GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

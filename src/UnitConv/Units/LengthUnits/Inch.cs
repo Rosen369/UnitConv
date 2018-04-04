@@ -6,16 +6,19 @@ namespace UnitConv.Units.LengthUnits
 {
     public class Inch : LengthUnit
     {
+        private class Nested
+        {
+            internal static readonly Inch Instance = new Inch();
+        }
+
         private Inch()
         {
 
         }
 
-        private static readonly Inch _instance = new Inch();
-
         public static Inch GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

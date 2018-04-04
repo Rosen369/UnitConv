@@ -6,16 +6,19 @@ namespace UnitConv.Units.LengthUnits
 {
     public class Kilometer : LengthUnit
     {
+        private class Nested
+        {
+            internal static readonly Kilometer Instance = new Kilometer();
+        }
+
         private Kilometer()
         {
 
         }
 
-        private static readonly Kilometer _instance = new Kilometer();
-
         public static Kilometer GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

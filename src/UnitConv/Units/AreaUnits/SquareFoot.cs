@@ -6,16 +6,19 @@ namespace UnitConv.Units.AreaUnits
 {
     class SquareFoot : AreaUnit
     {
+        private class Nested
+        {
+            internal static readonly SquareFoot Instance = new SquareFoot();
+        }
+
         private SquareFoot()
         {
 
         }
 
-        private static readonly SquareFoot _instance = new SquareFoot();
-
         public static SquareFoot GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

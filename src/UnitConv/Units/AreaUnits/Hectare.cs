@@ -6,16 +6,19 @@ namespace UnitConv.Units.AreaUnits
 {
     class Hectare : AreaUnit
     {
+        private class Nested
+        {
+            internal static readonly Hectare Instance = new Hectare();
+        }
+
         private Hectare()
         {
 
         }
 
-        private static readonly Hectare _instance = new Hectare();
-
         public static Hectare GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

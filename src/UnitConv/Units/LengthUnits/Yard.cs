@@ -6,16 +6,19 @@ namespace UnitConv.Units.LengthUnits
 {
     public class Yard : LengthUnit
     {
+        private class Nested
+        {
+            internal static readonly Yard Instance = new Yard();
+        }
+
         private Yard()
         {
 
         }
 
-        private static readonly Yard _instance = new Yard();
-
         public static Yard GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

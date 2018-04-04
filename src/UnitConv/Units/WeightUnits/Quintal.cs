@@ -6,16 +6,19 @@ namespace UnitConv.Units.WeightUnits
 {
     public class Quintal : WeightUnit
     {
+        private class Nested
+        {
+            internal static readonly Quintal Instance = new Quintal();
+        }
+
         private Quintal()
         {
 
         }
 
-        private static readonly Quintal _instance = new Quintal();
-
         public static Quintal GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

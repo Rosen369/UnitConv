@@ -6,16 +6,19 @@ namespace UnitConv.Units.DataUnits
 {
     class Petabyte : DataUnit
     {
+        private class Nested
+        {
+            internal static readonly Petabyte Instance = new Petabyte();
+        }
+
         private Petabyte()
         {
 
         }
 
-        private static readonly Petabyte _instance = new Petabyte();
-
         public static Petabyte GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

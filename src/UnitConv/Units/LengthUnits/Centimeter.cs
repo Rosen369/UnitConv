@@ -6,16 +6,19 @@ namespace UnitConv.Units.LengthUnits
 {
     public class Centimeter : LengthUnit
     {
+        private class Nested
+        {
+            internal static readonly Centimeter Instance = new Centimeter();
+        }
+
         private Centimeter()
         {
 
         }
 
-        private static readonly Centimeter _instance = new Centimeter();
-
         public static Centimeter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

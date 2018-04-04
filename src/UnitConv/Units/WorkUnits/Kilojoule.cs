@@ -6,16 +6,19 @@ namespace UnitConv.Units.WorkUnits
 {
     public class Kilojoule : WorkUnit
     {
+        private class Nested
+        {
+            internal static readonly Kilojoule Instance = new Kilojoule();
+        }
+
         private Kilojoule()
         {
 
         }
 
-        private static readonly Kilojoule _instance = new Kilojoule();
-
         public static Kilojoule GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

@@ -6,16 +6,19 @@ namespace UnitConv.Units.StrengthUnits
 {
     public class GramForce : StrengthUnit
     {
+        private class Nested
+        {
+            internal static readonly GramForce Instance = new GramForce();
+        }
+
         private GramForce()
         {
 
         }
 
-        private static readonly GramForce _instance = new GramForce();
-
         public static GramForce GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

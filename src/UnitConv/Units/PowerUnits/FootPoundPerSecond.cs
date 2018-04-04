@@ -6,16 +6,19 @@ namespace UnitConv.Units.PowerUnits
 {
     public class FootPoundPerSecond : PowerUnit
     {
+        private class Nested
+        {
+            internal static readonly FootPoundPerSecond Instance = new FootPoundPerSecond();
+        }
+
         private FootPoundPerSecond()
         {
 
         }
 
-        private static readonly FootPoundPerSecond _instance = new FootPoundPerSecond();
-
         public static FootPoundPerSecond GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

@@ -6,16 +6,19 @@ namespace UnitConv.Units.PressureUnits
 {
     public class Hectopascal : PressureUnit
     {
+        private class Nested
+        {
+            internal static readonly Hectopascal Instance = new Hectopascal();
+        }
+
         private Hectopascal()
         {
 
         }
 
-        private static readonly Hectopascal _instance = new Hectopascal();
-
         public static Hectopascal GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

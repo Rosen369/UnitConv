@@ -6,16 +6,19 @@ namespace UnitConv.Units.LengthUnits
 {
     public class Meter : LengthUnit
     {
+        private class Nested
+        {
+            internal static readonly Meter Instance = new Meter();
+        }
+
         private Meter()
         {
 
         }
 
-        private static readonly Meter _instance = new Meter();
-
         public static Meter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

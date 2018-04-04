@@ -6,16 +6,19 @@ namespace UnitConv.Units.LengthUnits
 {
     public class Fathom : LengthUnit
     {
+        private class Nested
+        {
+            internal static readonly Fathom Instance = new Fathom();
+        }
+
         private Fathom()
         {
 
         }
 
-        private static readonly Fathom _instance = new Fathom();
-
         public static Fathom GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

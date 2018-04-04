@@ -6,16 +6,19 @@ namespace UnitConv.Units.StrengthUnits
 {
     public class KiloNewton : StrengthUnit
     {
+        private class Nested
+        {
+            internal static readonly KiloNewton Instance = new KiloNewton();
+        }
+
         private KiloNewton()
         {
 
         }
 
-        private static readonly KiloNewton _instance = new KiloNewton();
-
         public static KiloNewton GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

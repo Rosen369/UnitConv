@@ -6,16 +6,19 @@ namespace UnitConv.Units.PowerUnits
 {
     public class NewtonMeterPerSecond : PowerUnit
     {
+        private class Nested
+        {
+            internal static readonly NewtonMeterPerSecond Instance = new NewtonMeterPerSecond();
+        }
+
         private NewtonMeterPerSecond()
         {
 
         }
 
-        private static readonly NewtonMeterPerSecond _instance = new NewtonMeterPerSecond();
-
         public static NewtonMeterPerSecond GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

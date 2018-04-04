@@ -6,16 +6,19 @@ namespace UnitConv.Units.LengthUnits
 {
     public class Micrometer : LengthUnit
     {
+        private class Nested
+        {
+            internal static readonly Micrometer Instance = new Micrometer();
+        }
+
         private Micrometer()
         {
 
         }
 
-        private static readonly Micrometer _instance = new Micrometer();
-
         public static Micrometer GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

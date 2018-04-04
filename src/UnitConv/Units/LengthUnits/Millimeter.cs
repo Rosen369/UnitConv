@@ -6,16 +6,19 @@ namespace UnitConv.Units.LengthUnits
 {
     public class Millimeter : LengthUnit
     {
+        private class Nested
+        {
+            internal static readonly Millimeter Instance = new Millimeter();
+        }
+
         private Millimeter()
         {
 
         }
 
-        private static readonly Millimeter _instance = new Millimeter();
-
         public static Millimeter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()

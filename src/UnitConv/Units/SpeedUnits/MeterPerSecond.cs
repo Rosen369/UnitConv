@@ -6,16 +6,19 @@ namespace UnitConv.Units.SpeedUnits
 {
     public class MeterPerSecond : SpeedUnit
     {
+        private class Nested
+        {
+            internal static readonly MeterPerSecond Instance = new MeterPerSecond();
+        }
+
         private MeterPerSecond()
         {
 
         }
 
-        private static readonly MeterPerSecond _instance = new MeterPerSecond();
-
         public static MeterPerSecond GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
 
         protected override void InitDisplay()
