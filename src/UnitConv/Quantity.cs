@@ -56,7 +56,7 @@ namespace UnitConv
             var toRate = to.Rate;
             var fromSub = from.Subtrahend;
             var toSub = to.Subtrahend;
-            var targetValue = (this.Value + fromSub) * fromRate / toRate - toSub;
+            var targetValue = ((this.Value + fromSub) * fromRate - toSub) / toRate;
             return targetValue;
         }
 

@@ -13,6 +13,7 @@ namespace UnitConv.Units
         {
             this.InitRate();
             this.InitDisplay();
+            this.InitSubtrahend();
         }
 
         protected decimal _rate;
