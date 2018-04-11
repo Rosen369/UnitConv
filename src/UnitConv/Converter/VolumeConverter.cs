@@ -6,16 +6,19 @@ namespace UnitConv.Converter
 {
     public class VolumeConverter : ConverterBase<Volume, VolumeUnit>
     {
+        private class Nested
+        {
+            internal static readonly VolumeConverter Instance = new VolumeConverter();
+        }
+
         private VolumeConverter()
         {
 
         }
 
-        private static VolumeConverter _instance = new VolumeConverter();
-
         public static VolumeConverter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
     }
 }

@@ -6,16 +6,19 @@ namespace UnitConv.Converter
 {
     public class PowerConverter : ConverterBase<Power, PowerUnit>
     {
+        private class Nested
+        {
+            internal static readonly PowerConverter Instance = new PowerConverter();
+        }
+
         private PowerConverter()
         {
 
         }
 
-        private static PowerConverter _instance = new PowerConverter();
-
         public static PowerConverter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
     }
 }

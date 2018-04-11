@@ -6,16 +6,19 @@ namespace UnitConv.Converter
 {
     public class StrengthConverter : ConverterBase<Strength, StrengthUnit>
     {
+        private class Nested
+        {
+            internal static readonly StrengthConverter Instance = new StrengthConverter();
+        }
+
         private StrengthConverter()
         {
 
         }
 
-        private static StrengthConverter _instance = new StrengthConverter();
-
         public static StrengthConverter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
     }
 }

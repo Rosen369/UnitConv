@@ -6,16 +6,19 @@ namespace UnitConv.Converter
 {
     public class WorkConverter : ConverterBase<Work, WorkUnit>
     {
+        private class Nested
+        {
+            internal static readonly WorkConverter Instance = new WorkConverter();
+        }
+
         private WorkConverter()
         {
 
         }
 
-        private static WorkConverter _instance = new WorkConverter();
-
         public static WorkConverter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
     }
 }

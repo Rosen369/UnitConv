@@ -9,16 +9,19 @@ namespace UnitConv.Converter
     /// </summary>
     public class AreaConverter : ConverterBase<Area, AreaUnit>
     {
+        private class Nested
+        {
+            internal static readonly AreaConverter Instance = new AreaConverter();
+        }
+
         private AreaConverter()
         {
 
         }
 
-        private static AreaConverter _instance = new AreaConverter();
-
         public static AreaConverter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
     }
 }

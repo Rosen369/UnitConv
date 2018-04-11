@@ -6,16 +6,19 @@ namespace UnitConv.Converter
 {
     public class PressureConverter : ConverterBase<Pressure, PressureUnit>
     {
+        private class Nested
+        {
+            internal static readonly PressureConverter Instance = new PressureConverter();
+        }
+
         private PressureConverter()
         {
 
         }
 
-        private static PressureConverter _instance = new PressureConverter();
-
         public static PressureConverter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
     }
 }

@@ -6,16 +6,19 @@ namespace UnitConv.Converter
 {
     public class DataConverter : ConverterBase<Data, DataUnit>
     {
+        private class Nested
+        {
+            internal static readonly DataConverter Instance = new DataConverter();
+        }
+
         private DataConverter()
         {
 
         }
 
-        private static DataConverter _instance = new DataConverter();
-
         public static DataConverter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
     }
 }

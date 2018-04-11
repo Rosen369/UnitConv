@@ -9,16 +9,19 @@ namespace UnitConv.Converter
     /// </summary>
     public class TemperatureConverter : ConverterBase<Temperature, TemperatureUnit>
     {
+        private class Nested
+        {
+            internal static readonly TemperatureConverter Instance = new TemperatureConverter();
+        }
+
         private TemperatureConverter()
         {
 
         }
 
-        private static TemperatureConverter _instance = new TemperatureConverter();
-
         public static TemperatureConverter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
     }
 }

@@ -6,16 +6,19 @@ namespace UnitConv.Converter
 {
     public class SpeedConverter : ConverterBase<Speed, SpeedUnit>
     {
+        private class Nested
+        {
+            internal static readonly SpeedConverter Instance = new SpeedConverter();
+        }
+
         private SpeedConverter()
         {
 
         }
 
-        private static SpeedConverter _instance = new SpeedConverter();
-
         public static SpeedConverter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
     }
 }

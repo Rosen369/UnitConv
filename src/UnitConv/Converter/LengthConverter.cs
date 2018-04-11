@@ -9,16 +9,19 @@ namespace UnitConv.Converter
     /// </summary>
     public class LengthConverter : ConverterBase<Length, LengthUnit>
     {
+        private class Nested
+        {
+            internal static readonly LengthConverter Instance = new LengthConverter();
+        }
+
         private LengthConverter()
         {
 
         }
 
-        private static LengthConverter _instance = new LengthConverter();
-
         public static LengthConverter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
     }
 }

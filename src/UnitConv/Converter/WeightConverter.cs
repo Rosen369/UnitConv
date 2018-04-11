@@ -6,16 +6,19 @@ namespace UnitConv.Converter
 {
     public class WeightConverter : ConverterBase<Weight, WeightUnit>
     {
+        private class Nested
+        {
+            internal static readonly WeightConverter Instance = new WeightConverter();
+        }
+
         private WeightConverter()
         {
 
         }
 
-        private static WeightConverter _instance = new WeightConverter();
-
         public static WeightConverter GetInstance()
         {
-            return _instance;
+            return Nested.Instance;
         }
     }
 }
