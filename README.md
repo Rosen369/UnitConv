@@ -206,3 +206,8 @@ Work
 - Kilojoule
 - KilowattHour
 - MetricHorsepowerHour
+
+Temperature
+- Celsius
+- Fahrenheit
+- Kelvin
