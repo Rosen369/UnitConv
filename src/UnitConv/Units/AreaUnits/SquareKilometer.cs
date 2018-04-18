@@ -26,7 +26,8 @@ namespace UnitConv.Units.AreaUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "平方千米" },
-                { Languages.English, "km²" }
+                { Languages.English, "square kilometer" },
+                { Languages.Symbol, "km²" }
             };
         }
 

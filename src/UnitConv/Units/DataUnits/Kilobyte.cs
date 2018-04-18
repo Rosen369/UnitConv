@@ -26,7 +26,8 @@ namespace UnitConv.Units.DataUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "千字节" },
-                { Languages.English, "KB" }
+                { Languages.English, "kilobyte" },
+                { Languages.Symbol, "KB" }
             };
         }
 

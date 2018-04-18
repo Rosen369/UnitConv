@@ -26,7 +26,8 @@ namespace UnitConv.Units.SpeedUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "马赫" },
-                { Languages.English, "mach" }
+                { Languages.English, "mach" },
+                { Languages.Symbol, "mach" }
             };
         }
 

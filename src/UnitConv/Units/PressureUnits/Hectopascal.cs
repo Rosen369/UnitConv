@@ -26,7 +26,8 @@ namespace UnitConv.Units.PressureUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "百帕" },
-                { Languages.English, "hPa" }
+                { Languages.English, "hectopascal" },
+                { Languages.Symbol, "hPa" }
             };
         }
 

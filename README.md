@@ -62,13 +62,14 @@ var r6 = kilo > meter;  //false
 
 ```c#
 var kilo = new Length(1.184m, LengthUnit.Kilometer);
-var en = kilo.ToString();	//100.142km
-var ch = kilo.ToString(Languages.Chinese);	//"100.142千米"
+var symbol = kilo.ToString();	//100.142km
+var ch = kilo.ToString(Languages.Chinese);	//100.142千米
+var en = kilo.ToString(Languages.English);	//100.142kilometer
 ```
 
 # Default string settings
 ```c#
-UnitConvSettings.DefaultLanguage = Languages.English;
+UnitConvSettings.DefaultLanguage = Languages.Symbol;
 UnitConvSettings.DefaultDigits = 3;
 ```
 

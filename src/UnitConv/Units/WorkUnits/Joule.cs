@@ -26,7 +26,8 @@ namespace UnitConv.Units.WorkUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "焦耳" },
-                { Languages.English, "J" }
+                { Languages.English, "joule" },
+                { Languages.Symbol, "J" }
             };
         }
 

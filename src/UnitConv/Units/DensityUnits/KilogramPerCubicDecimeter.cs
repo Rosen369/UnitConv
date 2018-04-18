@@ -26,7 +26,8 @@ namespace UnitConv.Units.DensityUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "千克/立方分米" },
-                { Languages.English, "kg/dm³" }
+                { Languages.English, "kilogram per cubic decimeter" },
+                { Languages.Symbol, "kg/dm³" }
             };
         }
 

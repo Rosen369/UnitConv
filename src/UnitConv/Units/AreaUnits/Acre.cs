@@ -26,7 +26,8 @@ namespace UnitConv.Units.AreaUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "英亩" },
-                { Languages.English, "acre" }
+                { Languages.English, "acre" },
+                { Languages.Symbol, "acre" }
             };
         }
 

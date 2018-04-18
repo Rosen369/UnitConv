@@ -26,7 +26,8 @@ namespace UnitConv.Units.SpeedUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "英寸/秒" },
-                { Languages.English, "in/s" }
+                { Languages.English, "inch per second" },
+                { Languages.Symbol, "in/s" }
             };
         }
 

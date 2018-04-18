@@ -26,7 +26,8 @@ namespace UnitConv.Units.LengthUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "英寸" },
-                { Languages.English, "in" }
+                { Languages.English, "inch" },
+                { Languages.Symbol, "in" }
             };
         }
 

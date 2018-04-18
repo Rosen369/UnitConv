@@ -26,7 +26,8 @@ namespace UnitConv.Units.WeightUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "盎司" },
-                { Languages.English, "oz" }
+                { Languages.English, "ounce" },
+                { Languages.Symbol, "oz" }
             };
         }
 

@@ -26,7 +26,8 @@ namespace UnitConv.Units.WeightUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "公担" },
-                { Languages.English, "q" }
+                { Languages.English, "quintal" },
+                { Languages.Symbol, "q" }
             };
         }
 

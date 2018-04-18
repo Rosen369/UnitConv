@@ -26,7 +26,8 @@ namespace UnitConv.Units.LengthUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "天文单位" },
-                { Languages.English, "AU" }
+                { Languages.English, "astronomical unit" },
+                { Languages.Symbol, "AU" }
             };
         }
 

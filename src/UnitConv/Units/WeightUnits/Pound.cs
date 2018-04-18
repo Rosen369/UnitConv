@@ -26,7 +26,8 @@ namespace UnitConv.Units.WeightUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "磅" },
-                { Languages.English, "lb" }
+                { Languages.English, "pound" },
+                { Languages.Symbol, "lb" }
             };
         }
 

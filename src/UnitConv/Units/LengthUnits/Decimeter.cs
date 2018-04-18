@@ -26,7 +26,8 @@ namespace UnitConv.Units.LengthUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "分米" },
-                { Languages.English, "dm" }
+                { Languages.English, "decimeter" },
+                { Languages.Symbol, "dm" }
             };
         }
 

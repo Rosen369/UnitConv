@@ -26,7 +26,8 @@ namespace UnitConv.Units.WorkUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "英尺·磅" },
-                { Languages.English, "ft·lb" }
+                { Languages.English, "foot pound" },
+                { Languages.Symbol, "ft·lb" }
             };
         }
 

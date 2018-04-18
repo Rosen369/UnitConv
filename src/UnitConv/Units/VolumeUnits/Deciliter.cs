@@ -26,7 +26,8 @@ namespace UnitConv.Units.VolumeUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "分升" },
-                { Languages.English, "dl" }
+                { Languages.English, "deciliter" },
+                { Languages.Symbol, "dl" }
             };
         }
 

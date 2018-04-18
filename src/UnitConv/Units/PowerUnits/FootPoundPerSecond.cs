@@ -26,7 +26,8 @@ namespace UnitConv.Units.PowerUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "英尺·磅/秒" },
-                { Languages.English, "ft·lb/s" }
+                { Languages.English, "foot pound per second" },
+                { Languages.Symbol, "ft·lb/s" }
             };
         }
 

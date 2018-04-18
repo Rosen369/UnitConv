@@ -100,7 +100,7 @@ namespace UnitConv
 
         public override int GetHashCode()
         {
-            var str = this.Value.ToString() + this.Unit.GetDisplay(Languages.English);
+            var str = this.Value.ToString() + this.Unit.GetDisplay(Languages.Symbol);
             var hashCode = str.GetHashCode();
             return hashCode;
         }

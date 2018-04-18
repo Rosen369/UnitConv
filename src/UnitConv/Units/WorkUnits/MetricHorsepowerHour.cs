@@ -26,7 +26,8 @@ namespace UnitConv.Units.WorkUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "米制马力·时" },
-                { Languages.English, "ps·h" }
+                { Languages.English, "metric horsepower hour" },
+                { Languages.Symbol, "ps·h" }
             };
         }
 

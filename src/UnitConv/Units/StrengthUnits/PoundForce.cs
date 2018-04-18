@@ -26,7 +26,8 @@ namespace UnitConv.Units.StrengthUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "磅力" },
-                { Languages.English, "lbf" }
+                { Languages.English, "pound force" },
+                { Languages.Symbol, "lbf" }
             };
         }
 

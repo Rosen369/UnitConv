@@ -26,7 +26,8 @@ namespace UnitConv.Units.TemperatureUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "华氏度" },
-                { Languages.English, "°F" }
+                { Languages.English, "Fahrenheit" },
+                { Languages.Symbol, "°F" }
             };
         }
 

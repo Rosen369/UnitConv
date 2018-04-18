@@ -26,7 +26,8 @@ namespace UnitConv.Units.StrengthUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "千磅力" },
-                { Languages.English, "kip" }
+                { Languages.English, "kilopound force" },
+                { Languages.Symbol, "kip" }
             };
         }
 

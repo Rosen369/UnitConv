@@ -26,7 +26,8 @@ namespace UnitConv.Units.PressureUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "牛顿/平方米" },
-                { Languages.English, "N/m²" }
+                { Languages.English, "Newton per square meter" },
+                { Languages.Symbol, "N/m²" }
             };
         }
 

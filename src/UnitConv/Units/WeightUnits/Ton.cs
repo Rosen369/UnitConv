@@ -26,7 +26,8 @@ namespace UnitConv.Units.WeightUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "吨" },
-                { Languages.English, "t" }
+                { Languages.English, "ton" },
+                { Languages.Symbol, "t" }
             };
         }
 

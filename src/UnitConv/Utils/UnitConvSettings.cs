@@ -9,12 +9,12 @@ namespace UnitConv
     /// </summary>
     public static class UnitConvSettings
     {
-        private static Languages _defaultLanguage = Languages.English;
+        private static Languages _defaultLanguage = Languages.Symbol;
 
         private static int _defaultDigits = 3;
 
         /// <summary>
-        /// default tostring language is english
+        /// default tostring display type is symbol
         /// set this property to change default language
         /// </summary>
         public static Languages DefaultLanguage

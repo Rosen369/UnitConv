@@ -26,7 +26,8 @@ namespace UnitConv.Units.StrengthUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "公吨力" },
-                { Languages.English, "tf" }
+                { Languages.English, "tonne force" },
+                { Languages.Symbol, "tf" }
             };
         }
 

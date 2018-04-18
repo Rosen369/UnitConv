@@ -26,7 +26,8 @@ namespace UnitConv.Units.TemperatureUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "开氏度" },
-                { Languages.English, "K" }
+                { Languages.English, "Kelvin" },
+                { Languages.Symbol, "K" }
             };
         }
 

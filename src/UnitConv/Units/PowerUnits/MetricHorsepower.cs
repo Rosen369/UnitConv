@@ -26,7 +26,8 @@ namespace UnitConv.Units.PowerUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "米制马力" },
-                { Languages.English, "ps" }
+                { Languages.English, "metric horsepower" },
+                { Languages.Symbol, "ps" }
             };
         }
 

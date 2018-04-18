@@ -26,7 +26,8 @@ namespace UnitConv.Units.WeightUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "千克" },
-                { Languages.English, "kg" }
+                { Languages.English, "kilogram" },
+                { Languages.Symbol, "kg" }
             };
         }
 

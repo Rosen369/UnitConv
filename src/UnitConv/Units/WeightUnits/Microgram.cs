@@ -26,7 +26,8 @@ namespace UnitConv.Units.WeightUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "微克" },
-                { Languages.English, "ug" }
+                { Languages.English, "microgram" },
+                { Languages.Symbol, "ug" }
             };
         }
 

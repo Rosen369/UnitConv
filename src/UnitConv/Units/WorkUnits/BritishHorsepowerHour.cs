@@ -26,7 +26,8 @@ namespace UnitConv.Units.WorkUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "英制马力·时" },
-                { Languages.English, "hp·h" }
+                { Languages.English, "British horse power hour" },
+                { Languages.Symbol, "hp·h" }
             };
         }
 

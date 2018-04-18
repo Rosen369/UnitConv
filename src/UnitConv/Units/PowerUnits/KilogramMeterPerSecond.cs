@@ -26,7 +26,8 @@ namespace UnitConv.Units.PowerUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "千克·米/秒" },
-                { Languages.English, "kg·m/s" }
+                { Languages.English, "kilogram meter per second" },
+                { Languages.Symbol, "kg·m/s" }
             };
         }
 

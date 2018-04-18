@@ -26,7 +26,8 @@ namespace UnitConv.Units.PressureUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "标准大气压" },
-                { Languages.English, "atm" }
+                { Languages.English, "atmosphere" },
+                { Languages.Symbol, "atm" }
             };
         }
 

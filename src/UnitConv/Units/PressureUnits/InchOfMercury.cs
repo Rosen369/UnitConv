@@ -26,7 +26,8 @@ namespace UnitConv.Units.PressureUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "英寸汞柱" },
-                { Languages.English, "inHg" }
+                { Languages.English, "inch of mercury" },
+                { Languages.Symbol, "inHg" }
             };
         }
 

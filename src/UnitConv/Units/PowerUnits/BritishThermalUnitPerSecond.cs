@@ -26,7 +26,8 @@ namespace UnitConv.Units.PowerUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "英热单位/秒" },
-                { Languages.English, "Btu/s" }
+                { Languages.English, "British thermal unit per second" },
+                { Languages.Symbol, "Btu/s" }
             };
         }
 

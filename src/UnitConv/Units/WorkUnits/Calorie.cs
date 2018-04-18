@@ -26,7 +26,8 @@ namespace UnitConv.Units.WorkUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "卡" },
-                { Languages.English, "cal" }
+                { Languages.English, "calorie" },
+                { Languages.Symbol, "cal" }
             };
         }
 

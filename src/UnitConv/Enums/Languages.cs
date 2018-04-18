@@ -10,6 +10,7 @@ namespace UnitConv
     public enum Languages
     {
         Chinese,
+        Symbol,
         English
     }
 }

@@ -26,7 +26,8 @@ namespace UnitConv.Units.WorkUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "千克·米" },
-                { Languages.English, "kg·m" }
+                { Languages.English, "kilogram meter" },
+                { Languages.Symbol, "kg·m" }
             };
         }
 

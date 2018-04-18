@@ -26,7 +26,8 @@ namespace UnitConv.Units.LengthUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "英尺" },
-                { Languages.English, "ft" }
+                { Languages.English, "foot" },
+                { Languages.Symbol, "ft" }
             };
         }
 

@@ -26,7 +26,8 @@ namespace UnitConv.Units.PowerUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "瓦" },
-                { Languages.English, "W" }
+                { Languages.English, "watt" },
+                { Languages.Symbol, "W" }
             };
         }
 

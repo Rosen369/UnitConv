@@ -26,7 +26,8 @@ namespace UnitConv.Units.AreaUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "公顷" },
-                { Languages.English, "ha" }
+                { Languages.English, "hectare" },
+                { Languages.Symbol, "ha" }
             };
         }
 

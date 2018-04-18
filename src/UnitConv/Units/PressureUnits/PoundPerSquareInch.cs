@@ -26,7 +26,8 @@ namespace UnitConv.Units.PressureUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "磅力/平方英寸" },
-                { Languages.English, "psi" }
+                { Languages.English, "pound per square inch" },
+                { Languages.Symbol, "psi" }
             };
         }
 

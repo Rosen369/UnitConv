@@ -26,7 +26,8 @@ namespace UnitConv.Units.VolumeUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "毫升" },
-                { Languages.English, "ml" }
+                { Languages.English, "milliliter" },
+                { Languages.Symbol, "ml" }
             };
         }
 

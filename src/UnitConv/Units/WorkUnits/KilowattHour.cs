@@ -26,7 +26,8 @@ namespace UnitConv.Units.WorkUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "千瓦·时" },
-                { Languages.English, "kW·h" }
+                { Languages.English, "kilowatt hour" },
+                { Languages.Symbol, "kW·h" }
             };
         }
 

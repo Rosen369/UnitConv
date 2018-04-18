@@ -26,7 +26,8 @@ namespace UnitConv.Units.PressureUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "毫米汞柱" },
-                { Languages.English, "mmHg" }
+                { Languages.English, "millimeter of mercury" },
+                { Languages.Symbol, "mmHg" }
             };
         }
 

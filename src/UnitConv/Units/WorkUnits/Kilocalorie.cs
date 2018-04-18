@@ -26,7 +26,8 @@ namespace UnitConv.Units.WorkUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "千卡" },
-                { Languages.English, "kcal" }
+                { Languages.English, "kilocalorie" },
+                { Languages.Symbol, "kcal" }
             };
         }
 

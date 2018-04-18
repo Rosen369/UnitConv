@@ -26,7 +26,8 @@ namespace UnitConv.Units.LengthUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "光年" },
-                { Languages.English, "ly" }
+                { Languages.English, "light year" },
+                { Languages.Symbol, "ly" }
             };
         }
 

@@ -31,7 +31,11 @@ namespace UnitConv.Utils
             {
                 foreach (var unit in units)
                 {
-                    dic.Add(unit.GetDisplay(language), unit);
+                    var display = unit.GetDisplay(language);
+                    if (!dic.ContainsKey(display))
+                    {
+                        dic.Add(display, unit);
+                    }
                 }
             }
             _container.Add(typeof(T).ToString(), dic);

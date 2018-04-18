@@ -26,7 +26,8 @@ namespace UnitConv.Units.WeightUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "毫克" },
-                { Languages.English, "mg" }
+                { Languages.English, "milligram" },
+                { Languages.Symbol, "mg" }
             };
         }
 

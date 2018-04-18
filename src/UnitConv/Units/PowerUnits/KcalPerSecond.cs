@@ -26,7 +26,8 @@ namespace UnitConv.Units.PowerUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "千卡/秒" },
-                { Languages.English, "kcal/s" }
+                { Languages.English, "kilocalories per second" },
+                { Languages.Symbol, "kcal/s" }
             };
         }
 

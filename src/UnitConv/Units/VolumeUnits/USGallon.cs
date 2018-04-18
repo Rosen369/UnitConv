@@ -26,7 +26,8 @@ namespace UnitConv.Units.VolumeUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "美制加仑" },
-                { Languages.English, "us gal" }
+                { Languages.English, "US gallon" },
+                { Languages.Symbol, "US gal" }
             };
         }
 

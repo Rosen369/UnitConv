@@ -26,7 +26,8 @@ namespace UnitConv.Units.DensityUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "克/立方米" },
-                { Languages.English, "g/m³" }
+                { Languages.English, "gram per cubic meter" },
+                { Languages.Symbol, "g/m³" }
             };
         }
 

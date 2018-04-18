@@ -26,7 +26,8 @@ namespace UnitConv.Units.PowerUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "焦耳/秒" },
-                { Languages.English, "J/s" }
+                { Languages.English, "joule per second" },
+                { Languages.Symbol, "J/s" }
             };
         }
 

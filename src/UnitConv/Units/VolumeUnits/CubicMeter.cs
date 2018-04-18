@@ -26,7 +26,8 @@ namespace UnitConv.Units.VolumeUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "立方米" },
-                { Languages.English, "m³" }
+                { Languages.English, "cubic meter" },
+                { Languages.Symbol, "m³" }
             };
         }
 

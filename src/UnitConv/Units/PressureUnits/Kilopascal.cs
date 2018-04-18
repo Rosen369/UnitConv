@@ -26,7 +26,8 @@ namespace UnitConv.Units.PressureUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "千帕" },
-                { Languages.English, "kPa" }
+                { Languages.English, "kilopascal" },
+                { Languages.Symbol, "kPa" }
             };
         }
 

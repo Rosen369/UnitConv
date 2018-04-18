@@ -26,7 +26,8 @@ namespace UnitConv.Units.StrengthUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "千牛" },
-                { Languages.English, "kN" }
+                { Languages.English, "kilo Newton" },
+                { Languages.Symbol, "kN" }
             };
         }
 

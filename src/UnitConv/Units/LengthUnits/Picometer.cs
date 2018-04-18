@@ -26,7 +26,8 @@ namespace UnitConv.Units.LengthUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "皮米" },
-                { Languages.English, "pm" }
+                { Languages.English, "picometer" },
+                { Languages.Symbol, "pm" }
             };
         }
 

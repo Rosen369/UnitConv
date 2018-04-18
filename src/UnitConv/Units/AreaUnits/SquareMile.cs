@@ -26,7 +26,8 @@ namespace UnitConv.Units.AreaUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "平方英里" },
-                { Languages.English, "sq.mi" }
+                { Languages.English, "square mile" },
+                { Languages.Symbol, "sq.mi" }
             };
         }
 

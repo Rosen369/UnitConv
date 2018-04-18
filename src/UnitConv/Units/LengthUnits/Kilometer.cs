@@ -26,7 +26,8 @@ namespace UnitConv.Units.LengthUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "千米" },
-                { Languages.English, "km" }
+                { Languages.English, "kilometer" },
+                { Languages.Symbol, "km" }
             };
         }
 

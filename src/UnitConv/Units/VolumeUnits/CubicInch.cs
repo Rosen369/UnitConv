@@ -26,7 +26,8 @@ namespace UnitConv.Units.VolumeUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "立方英寸" },
-                { Languages.English, "cu.in." }
+                { Languages.English, "cubic inch" },
+                { Languages.Symbol, "cu.in." }
             };
         }
 

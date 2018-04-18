@@ -26,7 +26,8 @@ namespace UnitConv.Units.PressureUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "磅力/平方英尺" },
-                { Languages.English, "psf" }
+                { Languages.English, "pound per square foot" },
+                { Languages.Symbol, "psf" }
             };
         }
 

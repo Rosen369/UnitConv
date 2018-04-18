@@ -26,7 +26,8 @@ namespace UnitConv.Units.LengthUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "纳米" },
-                { Languages.English, "nm" }
+                { Languages.English, "nanometer" },
+                { Languages.Symbol, "nm" }
             };
         }
 

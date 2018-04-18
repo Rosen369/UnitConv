@@ -26,7 +26,8 @@ namespace UnitConv.Units.StrengthUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "克力" },
-                { Languages.English, "gf" }
+                { Languages.English, "gram force" },
+                { Languages.Symbol, "gf" }
             };
         }
 

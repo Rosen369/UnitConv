@@ -26,7 +26,8 @@ namespace UnitConv.Units.StrengthUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "千克力" },
-                { Languages.English, "kgf" }
+                { Languages.English, "kilogram force" },
+                { Languages.Symbol, "kgf" }
             };
         }
 

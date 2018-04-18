@@ -26,7 +26,8 @@ namespace UnitConv.Units.SpeedUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "千米/时" },
-                { Languages.English, "km/h" }
+                { Languages.English, "kilometer per hour" },
+                { Languages.Symbol, "km/h" }
             };
         }
 

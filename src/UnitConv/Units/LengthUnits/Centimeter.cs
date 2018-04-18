@@ -26,7 +26,8 @@ namespace UnitConv.Units.LengthUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "厘米" },
-                { Languages.English, "cm" }
+                { Languages.English, "centimeter" },
+                { Languages.Symbol, "cm" }
             };
         }
 

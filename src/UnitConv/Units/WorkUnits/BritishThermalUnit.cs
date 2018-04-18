@@ -26,7 +26,8 @@ namespace UnitConv.Units.WorkUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "英热单位" },
-                { Languages.English, "btu" }
+                { Languages.English, "British thermal unit" },
+                { Languages.Symbol, "btu" }
             };
         }
 

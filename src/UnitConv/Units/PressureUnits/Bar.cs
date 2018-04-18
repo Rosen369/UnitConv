@@ -26,7 +26,8 @@ namespace UnitConv.Units.PressureUnits
             _display = new Dictionary<Languages, string>
             {
                 { Languages.Chinese, "巴" },
-                { Languages.English, "bar" }
+                { Languages.English, "bar" },
+                { Languages.Symbol, "bar" }
             };
         }
 
