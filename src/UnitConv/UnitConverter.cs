@@ -90,6 +90,14 @@ namespace UnitConv
                 return WorkConverter.GetInstance();
             }
         }
+
+        public static TemperatureConverter TemperatureConverter
+        {
+            get
+            {
+                return TemperatureConverter.GetInstance();
+            }
+        }
     }
 }
 
