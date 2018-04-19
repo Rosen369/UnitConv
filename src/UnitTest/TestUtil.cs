@@ -27,5 +27,14 @@ namespace UnitConvTest
             var result = Util.ConvertUnit<LengthUnit>(unitStr);
             Assert.AreSame(result, LengthUnit.Kilometer);
         }
+
+        [TestMethod]
+        public void TestConvertQuantity()
+        {
+            var quantityStr = "110km";
+            var result = Util.ConvertQuantity<LengthUnit>(quantityStr);
+            Assert.AreEqual(result.Number, 110);
+            Assert.AreSame(result.Unit, LengthUnit.Kilometer);
+        }
     }
 }
