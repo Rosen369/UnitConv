@@ -31,7 +31,7 @@ namespace UnitConv
 
         protected internal override Weight ConvertValue(WeightUnit toUnit)
         {
-            if (toUnit == this.Unit) new Weight(this.Value, toUnit);
+            if (toUnit == this.Unit) return new Weight(this.Value, toUnit);
             var targetValue = this.CalculateConversion(this.Unit, toUnit);
             return new Weight(targetValue, toUnit);
         }

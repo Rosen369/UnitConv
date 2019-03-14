@@ -31,7 +31,7 @@ namespace UnitConv
 
         protected internal override Power ConvertValue(PowerUnit toUnit)
         {
-            if (toUnit == this.Unit) new Power(this.Value, toUnit);
+            if (toUnit == this.Unit) return new Power(this.Value, toUnit);
             var targetValue = this.CalculateConversion(this.Unit, toUnit);
             return new Power(targetValue, toUnit);
         }

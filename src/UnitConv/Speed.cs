@@ -31,7 +31,7 @@ namespace UnitConv
 
         protected internal override Speed ConvertValue(SpeedUnit toUnit)
         {
-            if (toUnit == this.Unit) new Speed(this.Value, toUnit);
+            if (toUnit == this.Unit) return new Speed(this.Value, toUnit);
             var targetValue = this.CalculateConversion(this.Unit, toUnit);
             return new Speed(targetValue, toUnit);
         }

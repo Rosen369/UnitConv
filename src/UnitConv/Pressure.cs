@@ -31,7 +31,7 @@ namespace UnitConv
 
         protected internal override Pressure ConvertValue(PressureUnit toUnit)
         {
-            if (toUnit == this.Unit) new Pressure(this.Value, toUnit);
+            if (toUnit == this.Unit) return new Pressure(this.Value, toUnit);
             var targetValue = this.CalculateConversion(this.Unit, toUnit);
             return new Pressure(targetValue, toUnit);
         }

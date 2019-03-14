@@ -31,7 +31,7 @@ namespace UnitConv
 
         protected internal override Density ConvertValue(DensityUnit toUnit)
         {
-            if (toUnit == this.Unit) new Density(this.Value, toUnit);
+            if (toUnit == this.Unit) return new Density(this.Value, toUnit);
             var targetValue = this.CalculateConversion(this.Unit, toUnit);
             return new Density(targetValue, toUnit);
         }

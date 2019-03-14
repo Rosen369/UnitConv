@@ -31,7 +31,7 @@ namespace UnitConv
 
         protected internal override Work ConvertValue(WorkUnit toUnit)
         {
-            if (toUnit == this.Unit) new Work(this.Value, toUnit);
+            if (toUnit == this.Unit) return new Work(this.Value, toUnit);
             var targetValue = this.CalculateConversion(this.Unit, toUnit);
             return new Work(targetValue, toUnit);
         }

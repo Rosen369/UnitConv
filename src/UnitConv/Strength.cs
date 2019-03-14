@@ -31,7 +31,7 @@ namespace UnitConv
 
         protected internal override Strength ConvertValue(StrengthUnit toUnit)
         {
-            if (toUnit == this.Unit) new Strength(this.Value, toUnit);
+            if (toUnit == this.Unit) return new Strength(this.Value, toUnit);
             var targetValue = this.CalculateConversion(this.Unit, toUnit);
             return new Strength(targetValue, toUnit);
         }

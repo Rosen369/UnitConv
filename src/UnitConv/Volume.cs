@@ -31,7 +31,7 @@ namespace UnitConv
 
         protected internal override Volume ConvertValue(VolumeUnit toUnit)
         {
-            if (toUnit == this.Unit) new Volume(this.Value, toUnit);
+            if (toUnit == this.Unit) return new Volume(this.Value, toUnit);
             var targetValue = this.CalculateConversion(this.Unit, toUnit);
             return new Volume(targetValue, toUnit);
         }

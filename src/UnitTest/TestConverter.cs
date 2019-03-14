@@ -29,5 +29,13 @@ namespace UnitTest
             Assert.AreEqual(kilo.Equals(meter5), true);
             Assert.AreEqual(kilo.Equals(meter6), true);
         }
+
+        [TestMethod]
+        public void TestConvertSame()
+        {
+            var meterOri = new Length(1184m, LengthUnit.Meter);
+            var sameMeter = meterOri.ConvertTo(LengthUnit.Meter);
+            Assert.AreEqual(meterOri, sameMeter);
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace UnitConv
 
         protected internal override Data ConvertValue(DataUnit toUnit)
         {
-            if (toUnit == this.Unit) new Data(this.Value, toUnit);
+            if (toUnit == this.Unit) return new Data(this.Value, toUnit);
             var targetValue = this.CalculateConversion(this.Unit, toUnit);
             return new Data(targetValue, toUnit);
         }

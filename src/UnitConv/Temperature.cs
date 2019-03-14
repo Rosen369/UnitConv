@@ -31,7 +31,7 @@ namespace UnitConv
 
         protected internal override Temperature ConvertValue(TemperatureUnit toUnit)
         {
-            if (toUnit == this.Unit) new Temperature(this.Value, toUnit);
+            if (toUnit == this.Unit) return new Temperature(this.Value, toUnit);
             var targetValue = this.CalculateConversion(this.Unit, toUnit);
             return new Temperature(targetValue, toUnit);
         }

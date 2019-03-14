@@ -1,18 +1,26 @@
 # UnitConv
+
 UnitConv is a simple and easy to use unit conversion library.
-   
+
+__Supported platforms:__
+
+- .NET Framework 4.5+ and 4.7+
+- .NET Standard 1.3+ and 2.0+
+
 [![license](https://img.shields.io/github/license/rosen369/unitconv.svg)](https://github.com/Rosen369/UnitConv/blob/master/LICENSE)
 [![NuGet](https://img.shields.io/nuget/dt/unitconv.svg)](https://www.nuget.org/packages/UnitConv/)
 
-# Feeds
-* NuGet [![NuGet](https://img.shields.io/nuget/v/UnitConv.svg)](https://www.nuget.org/packages/UnitConv/)
+## Feeds
 
-# Let's get started
+- NuGet [![NuGet](https://img.shields.io/nuget/v/UnitConv.svg)](https://www.nuget.org/packages/UnitConv/)
 
-From **NuGet**: 
-* PM> Install-Package UnitConv
+## Let's get started
 
-# Create a quantity
+From **NuGet**:
+
+- PM> Install-Package UnitConv
+
+## Create a quantity
 
 ```c#
 using UnitConv;
@@ -24,7 +32,7 @@ var meter4 = new Length(1184, "m");
 var meter5 = new Length("1184", LengthUnit.Meter);
 ```
 
-# Converter
+## Converter
 
 ```c#
 var kilo = new Length(1.184m, LengthUnit.Kilometer);
@@ -36,7 +44,7 @@ var meter5 = UnitConverter.Length.Convert(1.184m, "km", "m");
 var meter6 = UnitConverter.Length.Convert(1.184m, LengthUnit.Kilometer, LengthUnit.Meter);
 ```
 
-# Extension
+## Extension
 
 ```c#
 using UnitConv.Extension;
@@ -46,7 +54,8 @@ var meter = kilo.ToMeter();
 var mile = kilo.ToMile();
 ```
 
-# Operator
+## Operator
+
 ```c#
 var kilo = new Length(1.184m, LengthUnit.Kilometer);
 var meter = new Length(1184, LengthUnit.Meter);
@@ -58,24 +67,26 @@ var r5 = kilo < meter;  //false
 var r6 = kilo > meter;  //false
 ```
 
-# Get display
+## Get display
 
 ```c#
 var kilo = new Length(1.184m, LengthUnit.Kilometer);
-var symbol = kilo.ToString();	//100.142km
-var ch = kilo.ToString(Languages.Chinese);	//100.142千米
-var en = kilo.ToString(Languages.English);	//100.142kilometer
+var symbol = kilo.ToString();  //100.142km
+var ch = kilo.ToString(Languages.Chinese);  //100.142千米
+var en = kilo.ToString(Languages.English);  //100.142kilometer
 ```
 
-# Default string settings
+## Default string settings
+
 ```c#
 UnitConvSettings.DefaultLanguage = Languages.Symbol;
 UnitConvSettings.DefaultDigits = 3;
 ```
 
-# Supported quantity types
+## Supported quantity types
 
-Area
+__Area:__
+
 - Acre
 - Are
 - Hectare
@@ -89,7 +100,8 @@ Area
 - SquareMillimeter
 - SquareYard
 
-Data
+__Data:__
+
 - Bit
 - Byte
 - Gigabyte
@@ -98,7 +110,8 @@ Data
 - Petabyte
 - Terabyte
 
-Density
+__Density:__
+
 - GramPerCubicCentimeter
 - GramPerCubicDecimeter
 - GramPerCubicMeter
@@ -106,7 +119,8 @@ Density
 - KilogramPerCubicDecimeter
 - KilogramPerCubicMeter
 
-Length
+__Length:__
+
 - AstronomicalUnit
 - Centimeter
 - Decimeter
@@ -125,7 +139,8 @@ Length
 - Picometer
 - Yard
 
-Power
+__Power:__
+
 - BritishHorsepower
 - BritishThermalUnitPerSecond
 - FootPoundPerSecond
@@ -137,7 +152,8 @@ Power
 - NewtonMeterPerSecond
 - Watt
 
-Pressure
+__Pressure:__
+
 - Atmosphere
 - Bar
 - Hectopascal
@@ -151,7 +167,8 @@ Pressure
 - PoundPerSquareFoot
 - PoundPerSquareInch
 
-Speed
+__Speed:__
+
 - InchPerSecond
 - KilometerPerHour
 - KilometerPerSecond
@@ -159,7 +176,8 @@ Speed
 - MeterPerSecond
 - MilePerHour
 
-Strength
+__Strength:__
+
 - Dyne
 - GramForce
 - KilogramForce
@@ -169,7 +187,8 @@ Strength
 - PoundForce
 - TonneForce
 
-Volume
+__Volume:__
+
 - Centilitre
 - CubicCentimeter
 - CubicDecimeter
@@ -186,7 +205,8 @@ Volume
 - UKGallon
 - USGallon
 
-Weight
+__Weight:__
+
 - Gram
 - Kilogram
 - Microgram
@@ -196,7 +216,8 @@ Weight
 - Quintal
 - Ton
 
-Work
+__Work:__
+
 - BritishHorsepowerHour
 - BritishThermalUnit
 - Calorie
@@ -208,7 +229,8 @@ Work
 - KilowattHour
 - MetricHorsepowerHour
 
-Temperature
+__Temperature:__
+
 - Celsius
 - Fahrenheit
 - Kelvin
