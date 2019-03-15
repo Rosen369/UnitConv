@@ -5,7 +5,7 @@ UnitConv is a simple and easy to use unit conversion library.
 __Supported platforms:__
 
 - .NET Framework 4.5+ and 4.7+
-- .NET Standard 1.3+ and 2.0+
+- .NET Standard 2.0+
 
 [![license](https://img.shields.io/github/license/rosen369/unitconv.svg)](https://github.com/Rosen369/UnitConv/blob/master/LICENSE)
 [![NuGet](https://img.shields.io/nuget/dt/unitconv.svg)](https://www.nuget.org/packages/UnitConv/)
